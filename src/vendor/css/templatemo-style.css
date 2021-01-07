@@ -132,7 +132,7 @@ p {
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
 	background-color: #f2745f;
 }
-bootstrap.min.css:5
+bootstrap.min.css:
 .navbar-toggle {
     position: relative;
     float: right;
@@ -148,10 +148,12 @@ bootstrap.min.css:5
 
 
 .banner {
-	padding: 180px 0px;
-	background-image: url(../../assets/img/banner-bg.jpg);
+	padding: 320px 0;
+	/*background-image: url(../../assets/img/banner-bg.jpg);*/
+  background-image: url("../../assets/img/slide01.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+	/*background-size: 100% 100%;*/
+  background-size: cover;
 	background-position: center center;
 	text-align: center;
 }
@@ -184,7 +186,7 @@ bootstrap.min.css:5
 }
 
 section.cook-delecious {
-	padding: 100px 0px;
+	padding: 100px 0;
 }
 
 .cook-delecious .first-image {
