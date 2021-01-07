@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  links = ["HOME", "ABOUT", "ROOMS", "CASINO", "EVENTS", "CONTACT"];
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  openLink(link){
+    this.router.navigate([link.toLowerCase()]);
+  }
 }

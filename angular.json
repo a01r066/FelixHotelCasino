@@ -33,7 +33,10 @@
               "src/vendor/css/templatemo-style.css"
             ],
             "scripts": [
-              "src/vendor/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"
+              "src/vendor/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js",
+              "src/vendor/js/vendor/bootstrap.min.js",
+              "src/vendor/js/main.js",
+              "src/vendor/js/plugins.js"
             ]
           },
           "configurations": {
