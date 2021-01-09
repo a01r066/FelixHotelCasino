@@ -8,12 +8,18 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   links = ["HOME", "ABOUT", "ROOMS", "CASINO", "EVENTS", "CONTACT"];
+  isCasino = false;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   openLink(link){
-    this.router.navigate([link.toLowerCase()]);
+    if(link === 'casino'){
+      this.isCasino = true;
+    } else {
+      this.router.navigate([link.toLowerCase()]);
+    }
   }
 }
