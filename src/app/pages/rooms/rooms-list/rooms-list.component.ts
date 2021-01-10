@@ -23,7 +23,7 @@ export class RoomsListComponent implements OnInit {
     });
 
     this.dataService.getRoomLists();
-    this.uiService.roomListsSub.subscribe(roomLists => {
+    this.uiService.roomsListSub.subscribe(roomLists => {
       this.roomLists = roomLists;
     });
   }

@@ -5,7 +5,7 @@ export class EventModel {
   content: string;
   imagePath: string;
   videoPath: string;
-  issudeDate: Date;
+  issueDate: Date;
 
   constructor(id: string, dataObj: { title: string, desc: string, content: string, imagePath: string, videoPath: string, issueDate: Date}) {
     this.id = id;
@@ -14,6 +14,6 @@ export class EventModel {
     this.content = dataObj.content;
     this.imagePath = dataObj.imagePath;
     this.videoPath = dataObj.videoPath;
-    this.issudeDate = dataObj.issueDate;
+    this.issueDate = dataObj.issueDate;
   }
 }

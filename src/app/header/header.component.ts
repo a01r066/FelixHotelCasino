@@ -22,4 +22,8 @@ export class HeaderComponent implements OnInit {
       this.router.navigate([link.toLowerCase()]);
     }
   }
+
+  backToHome(){
+    this.router.navigate(['']);
+  }
 }

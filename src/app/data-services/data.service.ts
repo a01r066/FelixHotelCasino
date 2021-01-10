@@ -3,6 +3,7 @@ import firebase from 'firebase';
 import {RoomCategory} from '../pages/rooms/room-category.model';
 import {UiService} from './ui.service';
 import {Room} from '../pages/rooms/room.model';
+import {EventModel} from '../pages/events/event.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,26 @@ export class DataService {
   database = firebase.database();
 
   constructor(private uiService: UiService) {
+  }
+
+  getEvents(){
+    const events: EventModel[] = [];
+    this.database.ref('Events').once('value').then(snapshot => {
+      snapshot.forEach(eventSnapshot => {
+        const eventID = eventSnapshot.key;
+        const dataObj = {
+          title: eventSnapshot.val().title,
+          desc: eventSnapshot.val().desc,
+          content: eventSnapshot.val().content,
+          imagePath: eventSnapshot.val().imagePath,
+          videoPath: eventSnapshot.val().videoPath,
+          issueDate: eventSnapshot.val().issueDate
+        };
+        const event = new EventModel(eventID, dataObj);
+        events.push(event);
+      });
+      this.uiService.eventsSub.next(events);
+    });
   }
 
   getRoomLists(){
@@ -37,7 +58,7 @@ export class DataService {
         });
         roomLists.push(rooms);
       });
-      this.uiService.roomListsSub.next(roomLists);
+      this.uiService.roomsListSub.next(roomLists);
     });
   }
 
