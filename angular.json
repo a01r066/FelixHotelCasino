@@ -29,8 +29,7 @@
               "src/vendor/css/bootstrap-theme.min.css",
               "src/vendor/css/fontAwesome.css",
               "src/vendor/css/hero-slider.css",
-              "src/vendor/css/owl-carousel.css",
-              "src/vendor/css/templatemo-style.css"
+              "src/vendor/css/owl-carousel.css"
             ],
             "scripts": [
               "src/vendor/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js",

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ngfelixhotelcasino"
+    "default": "ngfelixhotelcasino",
+    "felixhotelcasino": "ngfelixhotelcasino"
   }
 }

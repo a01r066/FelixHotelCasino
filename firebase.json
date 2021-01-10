@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/FelixHotelCasino",
     "ignore": [
       "firebase.json",
       "**/.*",

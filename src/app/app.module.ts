@@ -28,6 +28,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {environment} from '../environments/environment';
 import firebase from 'firebase';
+import {EventsListComponent} from './pages/events/events-list/events-list.component';
+import {EventsDetailComponent} from './pages/events/events-detail/events-detail.component';
+import {RoomsListComponent} from './pages/rooms/rooms-list/rooms-list.component';
+import {RoomsDetailComponent} from './pages/rooms/rooms-detail/rooms-detail.component';
 
 firebase.initializeApp(environment.firebase);
 
@@ -49,7 +53,11 @@ firebase.initializeApp(environment.firebase);
     EventsComponent,
     HomeComponent,
     SignUpComponent,
-    FooterComponent
+    FooterComponent,
+    EventsListComponent,
+    EventsDetailComponent,
+    RoomsListComponent,
+    RoomsDetailComponent
   ],
   imports: [
     BrowserModule,
