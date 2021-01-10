@@ -3,6 +3,7 @@ import {Room} from '../room.model';
 import {RoomCategory} from '../room-category.model';
 import {DataService} from '../../../data-services/data.service';
 import {UiService} from '../../../data-services/ui.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-rooms-list',
@@ -14,7 +15,8 @@ export class RoomsListComponent implements OnInit {
   roomCategories: RoomCategory[] = [];
 
   constructor(private dataService: DataService,
-              private uiService: UiService) { }
+              private uiService: UiService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.dataService.getRoomCategories();
@@ -28,4 +30,7 @@ export class RoomsListComponent implements OnInit {
     });
   }
 
+  viewDetail(room: Room){
+    this.router.navigate(['rooms', room.id]);
+  }
 }

@@ -36,6 +36,7 @@ import { FacilitiesComponent } from './pages/casino/facilities/facilities.compon
 import { GamesComponent } from './pages/casino/games/games.component';
 import { GameDetailComponent } from './pages/casino/games/game-detail/game-detail.component';
 import { GamesListComponent } from './pages/casino/games/games-list/games-list.component';
+import {NgImageSliderModule} from 'ng-image-slider';
 
 firebase.initializeApp(environment.firebase);
 
@@ -76,7 +77,8 @@ firebase.initializeApp(environment.firebase);
     AngularFireDatabaseModule,
     AngularFireAnalyticsModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    NgImageSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

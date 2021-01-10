@@ -10,6 +10,8 @@ import {UiService} from '../../data-services/ui.service';
 })
 export class AboutComponent implements OnInit {
   slides: Slide[] = [];
+  imageObject: Array<object> = [];
+
   index = 0;
 
   constructor(private dataService: DataService,
@@ -19,6 +21,12 @@ export class AboutComponent implements OnInit {
     this.dataService.getSlides();
     this.uiService.slidesSub.subscribe(slides => {
       this.slides = slides;
+      slides.forEach(slide => {
+        this.imageObject.push({
+          image: slide.imagePath,
+          thumbImage: slide.imagePath
+        });
+      });
     });
 
     // this.setInterval();

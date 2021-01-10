@@ -1,0 +1,14 @@
+.info {
+  text-align: left;
+}
+footer p {
+  line-height: 20px;
+  color: #fff;
+  margin-top: 24px;
+}
+
+footer p em {
+  font-style: inherit;
+  color: lavender;
+  font-weight: 300;
+}
