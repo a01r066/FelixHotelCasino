@@ -16,8 +16,7 @@ export class FeaturedFoodComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getRoomLists();
     this.uiService.roomsListSub.subscribe(roomLists => {
-      const revertRooms = roomLists.reverse();
-      revertRooms.forEach(rooms => {
+      roomLists.forEach(rooms => {
         this.rooms.push(rooms[0]);
       });
       this.rooms = this.rooms.slice(0, 3);

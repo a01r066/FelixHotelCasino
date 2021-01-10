@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Slide} from './slide.model';
+import {DataService} from '../../data-services/data.service';
+import {UiService} from '../../data-services/ui.service';
 
 @Component({
   selector: 'app-about',
@@ -6,47 +9,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  slidePaths = [
-    '../../assets/img/slideshow/sld00.jpg',
-    '../../assets/img/slideshow/sld01.jpg',
-    '../../assets/img/slideshow/sld02.jpg',
-    '../../assets/img/slideshow/sld03.jpg',
-    '../../assets/img/slideshow/sld04.jpg',
-    '../../assets/img/slideshow/sld05.jpg',
-    '../../assets/img/slideshow/sld06.jpg',
-    '../../assets/img/slideshow/sld07.jpg',
-    '../../assets/img/slideshow/sld08.jpg',
-    '../../assets/img/slideshow/sld09.jpg',
-    '../../assets/img/slideshow/sld10.jpg',
-    '../../assets/img/slideshow/sld11.jpg',
-    '../../assets/img/slideshow/sld12.jpg',
-    '../../assets/img/slideshow/sld13.jpg',
-    '../../assets/img/slideshow/sld14.jpg',
-    '../../assets/img/slideshow/sld15.jpg',
-  ];
-
+  slides: Slide[] = [];
   index = 0;
 
-  constructor() { }
+  constructor(private dataService: DataService,
+              private uiService: UiService) { }
 
   ngOnInit(): void {
+    this.dataService.getSlides();
+    this.uiService.slidesSub.subscribe(slides => {
+      this.slides = slides;
+    });
+
+    // this.setInterval();
+  }
+
+  setInterval(){
+    setInterval(() => {
+      this.next();
+    }, 2500);
   }
 
   previous(){
     if (this.index > 0){
       this.index -= 1;
     } else {
-      this.index = this.slidePaths.length - 1;
+      this.index = this.slides.length - 1;
     }
-    console.log(this.slidePaths[this.index]);
+    console.log(this.slides[this.index]);
   }
 
   next(){
-    if (this.index < this.slidePaths.length - 1){
+    if (this.index < this.slides.length - 1){
       this.index += 1;
     } else {
       this.index = 0;
     }
-    console.log(this.slidePaths[this.index]);
+    console.log(this.slides[this.index]);
   }
 }

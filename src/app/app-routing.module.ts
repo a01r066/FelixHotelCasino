@@ -11,6 +11,10 @@ import { EventsDetailComponent } from './pages/events/events-detail/events-detai
 import { RoomsListComponent } from './pages/rooms/rooms-list/rooms-list.component';
 import { RoomsDetailComponent } from './pages/rooms/rooms-detail/rooms-detail.component';
 import {CommonModule} from '@angular/common';
+import {FacilitiesComponent} from './pages/casino/facilities/facilities.component';
+import {GamesComponent} from './pages/casino/games/games.component';
+import {GamesListComponent} from './pages/casino/games/games-list/games-list.component';
+import {GameDetailComponent} from './pages/casino/games/game-detail/game-detail.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,7 +24,13 @@ const routes: Routes = [
       { path: '', component: RoomsListComponent },
       { path: ':id', component: RoomsDetailComponent }
     ] },
-  { path: 'casino', component: CasinoComponent },
+  { path: 'casino', component: CasinoComponent, children: [
+      { path: '', component: FacilitiesComponent },
+      { path: 'games', component: GamesComponent, children: [
+          { path: '', component: GamesListComponent },
+          { path: ':id', component: GameDetailComponent }
+        ]}
+    ] },
   { path: 'events', component: EventsComponent, children: [
       { path: '', component: EventsListComponent },
       { path: ':id', component: EventsDetailComponent }

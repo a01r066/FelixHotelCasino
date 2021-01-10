@@ -4,6 +4,7 @@ import {RoomCategory} from '../pages/rooms/room-category.model';
 import {UiService} from './ui.service';
 import {Room} from '../pages/rooms/room.model';
 import {EventModel} from '../pages/events/event.model';
+import {Slide} from '../pages/about/slide.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,23 @@ export class DataService {
   database = firebase.database();
 
   constructor(private uiService: UiService) {
+  }
+
+  getSlides(){
+    const slides: Slide[] = [];
+    this.database.ref('Slides').once('value').then(snapshot => {
+      snapshot.forEach(slideSnapshot => {
+        const slideId = slideSnapshot.key;
+        const dataObj = {
+          title: slideSnapshot.val().title,
+          desc: slideSnapshot.val().desc,
+          imagePath: slideSnapshot.val().imagePath
+        };
+        const slide = new Slide(slideId, dataObj);
+        slides.push(slide);
+      });
+      this.uiService.slidesSub.next(slides);
+    });
   }
 
   getEvents(){

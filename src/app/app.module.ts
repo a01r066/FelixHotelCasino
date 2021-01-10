@@ -32,6 +32,10 @@ import {EventsListComponent} from './pages/events/events-list/events-list.compon
 import {EventsDetailComponent} from './pages/events/events-detail/events-detail.component';
 import {RoomsListComponent} from './pages/rooms/rooms-list/rooms-list.component';
 import {RoomsDetailComponent} from './pages/rooms/rooms-detail/rooms-detail.component';
+import { FacilitiesComponent } from './pages/casino/facilities/facilities.component';
+import { GamesComponent } from './pages/casino/games/games.component';
+import { GameDetailComponent } from './pages/casino/games/game-detail/game-detail.component';
+import { GamesListComponent } from './pages/casino/games/games-list/games-list.component';
 
 firebase.initializeApp(environment.firebase);
 
@@ -57,7 +61,11 @@ firebase.initializeApp(environment.firebase);
     EventsListComponent,
     EventsDetailComponent,
     RoomsListComponent,
-    RoomsDetailComponent
+    RoomsDetailComponent,
+    FacilitiesComponent,
+    GamesComponent,
+    GameDetailComponent,
+    GamesListComponent
   ],
   imports: [
     BrowserModule,
