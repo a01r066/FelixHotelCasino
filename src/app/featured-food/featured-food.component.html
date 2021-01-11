@@ -6,7 +6,7 @@
   </div>
   <div class="row">
     <div class="col-md-4" *ngFor="let room of rooms">
-      <div class="food-item">
+      <div class="food-item" (click)="viewDetail(room, rooms)" style="cursor: pointer">
         <h2>{{ room.title }}</h2>
         <img src="{{ room.imagePaths[0] }}" alt="">
         <div class="price">{{ room.ratesFrom | currency: 'USD': true: '.0'}}</div>

@@ -1,0 +1,13 @@
+.active {
+  outline: none;
+  box-shadow: none;
+  font-weight: 700;
+}
+
+.my-navbar-brand {
+  outline: none;
+}
+
+/**:focus {*/
+/*  outline: 0 !important;*/
+/*}*/

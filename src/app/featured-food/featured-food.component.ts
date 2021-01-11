@@ -24,4 +24,10 @@ export class FeaturedFoodComponent implements OnInit {
       this.rooms = this.rooms.slice(0, 3);
     });
   }
+
+  viewDetail(room: Room, rooms: Room[]){
+    this.dataService.selectedRoom = room;
+    this.dataService.filteredRooms = rooms;
+    this.router.navigate(['rooms', room.id]);
+  }
 }

@@ -1,6 +1,6 @@
 <div class="header">
   <div class="container">
-    <h1 class="my-navbar-brand scroll-top" (click)="backToHome()">
+    <h1 class="my-navbar-brand scroll-top" routerLink="" style="cursor: pointer">
       Felix Hotel & Casino</h1>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,7 +8,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active" *ngFor="let link of links; let i = index" (click)="openLink(link)">
+<!--          <li class="nav-item active" *ngFor="let link of links; let i = index" (click)="openLink(link)">-->
+          <li class="nav-item" *ngFor="let link of links; let i = index" routerLink="{{link.toLowerCase()}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
             <a class="nav-link">{{link}}</a>
           </li>
         </ul>

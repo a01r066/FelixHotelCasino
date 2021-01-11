@@ -14,16 +14,4 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  openLink(link){
-    if(link === 'casino'){
-      this.isCasino = true;
-    } else {
-      this.router.navigate([link.toLowerCase()]);
-    }
-  }
-
-  backToHome(){
-    this.router.navigate(['']);
-  }
 }

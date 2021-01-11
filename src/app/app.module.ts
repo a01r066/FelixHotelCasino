@@ -37,6 +37,9 @@ import { GamesComponent } from './pages/casino/games/games.component';
 import { GameDetailComponent } from './pages/casino/games/game-detail/game-detail.component';
 import { GamesListComponent } from './pages/casino/games/games-list/games-list.component';
 import {NgImageSliderModule} from 'ng-image-slider';
+import { BookRoomComponent } from './pages/rooms/rooms-detail/book-room/book-room.component';
+import {DpDatePickerModule} from 'ng2-date-picker';
+import {FormsModule} from '@angular/forms';
 
 firebase.initializeApp(environment.firebase);
 
@@ -66,20 +69,23 @@ firebase.initializeApp(environment.firebase);
     FacilitiesComponent,
     GamesComponent,
     GameDetailComponent,
-    GamesListComponent
+    GamesListComponent,
+    BookRoomComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    AngularFireAnalyticsModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule,
-    NgImageSliderModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireDatabaseModule,
+        AngularFireAnalyticsModule,
+        AngularFireAuthModule,
+        AngularFireStorageModule,
+        NgImageSliderModule,
+        DpDatePickerModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

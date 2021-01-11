@@ -15,6 +15,7 @@ import {FacilitiesComponent} from './pages/casino/facilities/facilities.componen
 import {GamesComponent} from './pages/casino/games/games.component';
 import {GamesListComponent} from './pages/casino/games/games-list/games-list.component';
 import {GameDetailComponent} from './pages/casino/games/game-detail/game-detail.component';
+import {BookRoomComponent} from './pages/rooms/rooms-detail/book-room/book-room.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: '', component: RoomsListComponent },
       { path: ':id', component: RoomsDetailComponent }
     ] },
+   { path: 'book-now/:title', component: BookRoomComponent },
   { path: 'casino', component: CasinoComponent, children: [
       { path: '', component: FacilitiesComponent },
       { path: 'games', component: GamesComponent, children: [

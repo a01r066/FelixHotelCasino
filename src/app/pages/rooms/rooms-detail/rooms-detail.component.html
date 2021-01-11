@@ -14,7 +14,7 @@
               <li class="list-group-item room-feature">VIEW <span style="float: right">{{ selectedRoom.view }}</span></li>
               <li class="list-group-item room-feature">RATES FROM <span style="float: right">{{ selectedRoom.ratesFrom | currency: 'USD': true: '.0' }}</span></li>
             </ul>
-            <button class="btn btn-success" style="font-size: 1.25rem; float: right; margin: 16px auto">Book Now</button>
+            <button class="btn btn-success" style="font-size: 1.25rem; float: right; margin: 16px auto" (click)="bookNow()">Book Now</button>
           </div>
           <div class="col-md-5">
             <img class="img-thumbnail" src="{{ selectedRoom.imagePaths[0] }}" alt="">

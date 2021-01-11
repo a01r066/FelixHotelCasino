@@ -25,4 +25,8 @@ export class RoomsDetailComponent implements OnInit {
   viewDetail(room: Room){
     this.selectedRoom = room;
   }
+
+  bookNow(){
+    this.router.navigate(['book-now', this.selectedRoom.title]);
+  }
 }
