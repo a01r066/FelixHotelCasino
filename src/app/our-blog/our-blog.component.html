@@ -8,16 +8,11 @@
   </div>
   <div class="row">
     <div class="col-md-6" *ngFor="let event of events">
-      <div class="blog-post">
+      <div class="blog-post" style="cursor: pointer" (click)="viewDetail(event)">
         <img src="{{ event.imagePath }}" alt="">
-        <div class="date">26 Oct 2020</div>
         <div class="right-content">
           <h4>{{ event.title }}</h4>
-<!--          <span>Branding / Admin</span>-->
-          <p>{{ event.desc.slice(0, 64)}}</p>
-          <div class="text-button">
-            <a href="#">Continue Reading</a>
-          </div>
+          <span>Period: {{ event?.dateStart }} ~ {{ event?.dateEnd }}</span>
         </div>
       </div>
     </div>

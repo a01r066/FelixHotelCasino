@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Room} from '../pages/rooms/room.model';
 import {DataService} from '../data-services/data.service';
 import {UiService} from '../data-services/ui.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-featured-food',

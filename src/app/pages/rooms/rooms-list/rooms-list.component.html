@@ -7,13 +7,13 @@
     </div>
     <div class="row">
       <div class="col-md-4" *ngFor="let room of rooms">
-        <div class="room-item" (click)="viewDetail(room, rooms)">
-          <h2> {{ room.title }} </h2>
-          <img src="{{ room.imagePaths[0]}}" alt="">
+        <div class="food-item" (click)="viewDetail(room, rooms)" style="cursor: pointer">
+          <h2>{{ room.title }}</h2>
+          <img class="img-thumbnail" src="{{ room.imagePaths[0] }}" alt="">
           <div class="price">{{ room.ratesFrom | currency: 'USD': true: '.0'}}</div>
-          <div class="text-content" style="text-align: center">
-            <!--            <h4>Kale Chips Art Party</h4>-->
-            <p>{{ room.desc }}</p>
+          <div class="text-content">
+            <!--          <h4>Kale Chips Art Party</h4>-->
+            <p>{{ room.desc.slice(0, 96) }}</p>
             <button class="btn btn-primary" style="font-size: 1.2rem">View Detail</button>
           </div>
         </div>

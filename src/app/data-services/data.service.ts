@@ -16,6 +16,8 @@ export class DataService {
   selectedRoom: Room;
   filteredRooms: Room[];
 
+  selectedEvent: EventModel;
+
   constructor(private uiService: UiService) {
   }
 
@@ -46,8 +48,10 @@ export class DataService {
           desc: eventSnapshot.val().desc,
           content: eventSnapshot.val().content,
           imagePath: eventSnapshot.val().imagePath,
+          fullImagePath: eventSnapshot.val().fullImagePath,
           videoPath: eventSnapshot.val().videoPath,
-          issueDate: eventSnapshot.val().issueDate
+          dateStart: eventSnapshot.val().dateStart,
+          dateEnd: eventSnapshot.val().dateEnd
         };
         const event = new EventModel(eventID, dataObj);
         events.push(event);
@@ -56,12 +60,12 @@ export class DataService {
     });
   }
 
-  getFilteredRooms(room: Room, rooms: Room[]){
-    this.filteredRooms = rooms.filter(currRoom => {
-      return currRoom.id !== room.id;
-    });
-    return this.filteredRooms;
-  }
+  // getFilteredRooms(room: Room, rooms: Room[]){
+  //   this.filteredRooms = rooms.filter(currRoom => {
+  //     return currRoom.id !== room.id;
+  //   });
+  //   return this.filteredRooms;
+  // }
 
   getRoomLists(){
     const roomLists: Room[][] = [];

@@ -1,0 +1,15 @@
+.down-content h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  font-family: 'Spectral', serif;
+  font-size: 2.5rem;
+  color: #121212;
+}
+
+.down-content span {
+  font-size: 1.5rem;
+  color: #7a7a7a;
+  /*display: inline-block;*/
+  margin-bottom: 18px;
+}

@@ -3,7 +3,7 @@ import {Room} from '../room.model';
 import {RoomCategory} from '../room-category.model';
 import {DataService} from '../../../data-services/data.service';
 import {UiService} from '../../../data-services/ui.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-rooms-list',
@@ -16,7 +16,8 @@ export class RoomsListComponent implements OnInit {
 
   constructor(private dataService: DataService,
               private uiService: UiService,
-              private router: Router) { }
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.dataService.getRoomCategories();
@@ -34,6 +35,7 @@ export class RoomsListComponent implements OnInit {
     this.dataService.selectedRoom = room;
     // this.dataService.getFilteredRooms(room, rooms);
     this.dataService.filteredRooms = rooms;
-    this.router.navigate(['rooms', room.id]);
+    // this.router.navigate(['rooms', room.id]);
+    this.router.navigate([room.title], { relativeTo: this.route });
   }
 }

@@ -1,1 +1,16 @@
-<p>events-detail works!</p>
+<section class="blog-page">
+  <div class="container">
+    <div class="row; mt-5; mb-5" style="justify-content: center; margin-top: 28px">
+      <div class="col-md-12">
+        <div class="down-content">
+          <h4>{{ selectedEvent.title }}</h4>
+          <span>Period: {{ selectedEvent?.dateStart }} ~ {{ selectedEvent?.dateEnd }}</span>
+        </div>
+        <hr>
+        <div>
+          <img src="{{ selectedEvent.fullImagePath }}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

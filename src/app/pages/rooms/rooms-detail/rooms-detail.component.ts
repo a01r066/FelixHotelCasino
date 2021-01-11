@@ -23,6 +23,7 @@ export class RoomsDetailComponent implements OnInit {
   }
 
   viewDetail(room: Room){
+    this.dataService.selectedRoom = room;
     this.selectedRoom = room;
   }
 

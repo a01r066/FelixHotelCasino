@@ -3,18 +3,17 @@
     <div class="row" style="justify-content: center">
       <div class="col-md-12">
         <h1>BOOK NOW</h1>
-        <p>Make a Reservation</p>
       </div>
     </div>
   </div>
 </section>
 <section class="book-now">
   <div class="container">
-    <div style="margin: 16px auto">
-      <h1>Reservation Details</h1>
-    </div>
-    <div class="row" style="margin-bottom: 16px">
-      <div class="col-md-12">
+    <div class="row mb-4">
+      <div class="col-md-8">
+        <div style="margin: 16px auto">
+          <h1>Reservation Details</h1>
+        </div>
         <form>
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -84,7 +83,7 @@
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="textArea">Additional Information *</label>
-              <textarea class="form-control" id="textArea" rows="4"></textarea>
+              <textarea class="form-control" id="textArea" rows="5"></textarea>
             </div>
           </div>
           <div class="form-row">
@@ -94,6 +93,25 @@
           </div>
         </form>
       </div>
+      <div class="col-md-4 mt-5">
+        <div class="food-item">
+          <h2>{{ selectedRoom.title }}</h2>
+          <img class="img-thumbnail" src="{{ selectedRoom.imagePaths[0] }}" alt="">
+          <div class="price">{{ selectedRoom.ratesFrom | currency: 'USD': true: '.0'}}</div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item room-feature">BEDS <span style="float: right">{{ selectedRoom.beds }}</span></li>
+          <li class="list-group-item room-feature">OCCUPANCY <span style="float: right">{{ selectedRoom.occupancy }}</span></li>
+          <li class="list-group-item room-feature">SIZE <span style="float: right">{{ selectedRoom.size }}</span></li>
+          <li class="list-group-item room-feature">VIEW <span style="float: right">{{ selectedRoom.view }}</span></li>
+          <li class="list-group-item room-feature">RATES FROM <span style="float: right">{{ selectedRoom.ratesFrom | currency: 'USD': true: '.0' }}</span></li>
+        </ul>
+      </div>
     </div>
+<!--    <div class="row" style="margin-bottom: 16px">-->
+<!--      <div class="col-md-12">-->
+<!--        -->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </section>

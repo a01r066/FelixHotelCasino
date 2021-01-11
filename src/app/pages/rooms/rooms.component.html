@@ -8,7 +8,19 @@
     </div>
   </div>
 </section>
-<router-outlet></router-outlet>
+<div class="tabs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2" style="margin: 16px auto">
+        <ul class="list-group list-group-flush" style="margin-top: 16px;">
+          <li class="list-group-item" style="font-size: 1.5rem; background-color: transparent">FACILITIES</li>
+          <li class="list-group-item" style="font-size: 1.5rem; background-color: transparent">ROOMS</li>
+        </ul>
+      </div>
+      <div class="col-md-10"><router-outlet></router-outlet></div>
+    </div>
+  </div>
+</div>
 <!--<section id="book-table">-->
 <!--  <app-book-table></app-book-table>-->
 <!--</section>-->

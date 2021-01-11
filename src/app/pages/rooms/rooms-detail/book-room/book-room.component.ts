@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Room} from '../../room.model';
+import {DataService} from '../../../../data-services/data.service';
 
 @Component({
   selector: 'app-book-room',
@@ -8,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class BookRoomComponent implements OnInit {
   datePickerConfig: any;
   selectedDate: any;
+  selectedRoom: Room;
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.selectedRoom = this.dataService.selectedRoom;
   }
-
 }
