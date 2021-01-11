@@ -1,28 +1,44 @@
 <section class="room-detail">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 mt-4 mb-4">
-        <h1>Standard Room</h1>
+      <div class="col-md-12 mt-5 mb-5">
+        <h1 style="text-transform: uppercase; font-weight: bolder">{{ selectedRoom.title }}</h1>
         <div class="row">
           <div class="col-md-7">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan, efficitur dolor fermentum, tincidunt metus ut vel turpis accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut.</p>
+<!--            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan.</h3>-->
+            <p>{{ selectedRoom.desc }}</p>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item room-feature">BEDS <span style="float: right">1 Double Bed</span></li>
-              <li class="list-group-item room-feature">OCCUPANCY <span style="float: right">2 Persons</span></li>
-              <li class="list-group-item room-feature">SIZE <span style="float: right">40 sqm</span></li>
-              <li class="list-group-item room-feature">VIEW <span style="float: right">Porto Bay</span></li>
-              <li class="list-group-item room-feature">RATES FROM <span style="float: right">USD 199</span></li>
+              <li class="list-group-item room-feature">BEDS <span style="float: right">{{ selectedRoom.beds }}</span></li>
+              <li class="list-group-item room-feature">OCCUPANCY <span style="float: right">{{ selectedRoom.occupancy }}</span></li>
+              <li class="list-group-item room-feature">SIZE <span style="float: right">{{ selectedRoom.size }}</span></li>
+              <li class="list-group-item room-feature">VIEW <span style="float: right">{{ selectedRoom.view }}</span></li>
+              <li class="list-group-item room-feature">RATES FROM <span style="float: right">{{ selectedRoom.ratesFrom | currency: 'USD': true: '.0' }}</span></li>
             </ul>
             <button class="btn btn-success" style="font-size: 1.25rem; float: right; margin: 16px auto">Book Now</button>
           </div>
           <div class="col-md-5">
-            <img class="img-thumbnail" src="../../../../assets/img/std04.jpg" alt="">
+            <img class="img-thumbnail" src="{{ selectedRoom.imagePaths[0] }}" alt="">
           </div>
         </div>
       </div>
-      <div class="col-md-12 mt-4 mb-4">
-        <app-featured-food></app-featured-food>
+      <hr>
+      <div class="col-md-12">
+        <div class="heading">
+          <a><h2 class="heading-text">More Rooms</h2></a>
+        </div>
+        <div class="row">
+          <div class="col-md-4" *ngFor="let room of filteredRooms">
+            <div class="food-item" (click)="viewDetail(room)" style="cursor: pointer">
+              <h2>{{ room.title }}</h2>
+              <img class="img-thumbnail" src="{{ room.imagePaths[0] }}" alt="">
+              <div class="price">{{ room.ratesFrom | currency: 'USD': true: '.0'}}</div>
+              <div class="text-content">
+                <!--          <h4>Kale Chips Art Party</h4>-->
+                <p>{{ room.desc.slice(0, 96) }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

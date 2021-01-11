@@ -3,3 +3,21 @@
   background-color: transparent;
   box-shadow: none;
 }
+
+.heading {
+  display: block;
+  text-align: center;
+  height: 124px;
+}
+
+.heading-text {
+  font-family: 'Roboto', arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 124px;
+  font-size: 22px;
+  color: #121212;
+}
+
+a:hover {
+  text-decoration: none;
+}

@@ -30,7 +30,10 @@ export class RoomsListComponent implements OnInit {
     });
   }
 
-  viewDetail(room: Room){
+  viewDetail(room: Room, rooms: Room[]){
+    this.dataService.selectedRoom = room;
+    // this.dataService.getFilteredRooms(room, rooms);
+    this.dataService.filteredRooms = rooms;
     this.router.navigate(['rooms', room.id]);
   }
 }

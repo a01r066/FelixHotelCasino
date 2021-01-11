@@ -13,6 +13,9 @@ export class DataService {
   apiURL = 'https://ngfelixhotelcasino-default-rtdb.firebaseio.com/';
   database = firebase.database();
 
+  selectedRoom: Room;
+  filteredRooms: Room[];
+
   constructor(private uiService: UiService) {
   }
 
@@ -51,6 +54,13 @@ export class DataService {
       });
       this.uiService.eventsSub.next(events);
     });
+  }
+
+  getFilteredRooms(room: Room, rooms: Room[]){
+    this.filteredRooms = rooms.filter(currRoom => {
+      return currRoom.id !== room.id;
+    });
+    return this.filteredRooms;
   }
 
   getRoomLists(){

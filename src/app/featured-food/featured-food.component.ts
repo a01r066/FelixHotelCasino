@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Room} from '../pages/rooms/room.model';
 import {DataService} from '../data-services/data.service';
 import {UiService} from '../data-services/ui.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-featured-food',
@@ -11,7 +12,8 @@ import {UiService} from '../data-services/ui.service';
 export class FeaturedFoodComponent implements OnInit {
   rooms: Room[] = [];
   constructor(private dataService: DataService,
-              private uiService: UiService) { }
+              private uiService: UiService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.dataService.getRoomLists();
