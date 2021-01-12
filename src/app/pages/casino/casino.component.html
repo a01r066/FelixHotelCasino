@@ -14,12 +14,12 @@
     <div class="row">
       <div class="col-md-2" style="margin: 16px auto">
         <ul class="flex-column">
-          <li class="nav-item" (click)="viewFacility()">
-            <a class="nav-link active">FACILITIES</a>
+          <li class="nav-item" *ngFor="let tab of tabs; let i = index" (click)="onSelect(i)">
+            <a class="nav-link active" [ngClass]="{highlight: i == selectedIndex}">{{ tab }}</a>
           </li>
-          <li class="nav-item" (click)="viewGames()">
-            <a class="nav-link">GAME GUIDES</a>
-          </li>
+<!--          <li class="nav-item" (click)="viewGames()">-->
+<!--            <a class="nav-link">GAME GUIDES</a>-->
+<!--          </li>-->
         </ul>
       </div>
       <div class="col-md-10"><router-outlet></router-outlet></div>

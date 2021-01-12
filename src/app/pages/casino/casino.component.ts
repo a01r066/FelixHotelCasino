@@ -7,6 +7,8 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./casino.component.css']
 })
 export class CasinoComponent implements OnInit {
+  tabs = ['FACILITIES', 'GAME GUIDES'];
+  selectedIndex = 0;
 
   constructor(private router: Router,
               private route: ActivatedRoute) { }
@@ -14,11 +16,12 @@ export class CasinoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  viewFacility(){
-    this.router.navigate(['casino']);
-  }
-
-  viewGames(){
-    this.router.navigate(['games'], { relativeTo: this.route });
+  onSelect(index: number){
+    this.selectedIndex = index;
+    if(index === 0){
+      this.router.navigate(['casino']);
+    } else {
+      this.router.navigate(['games'], { relativeTo: this.route });
+    }
   }
 }

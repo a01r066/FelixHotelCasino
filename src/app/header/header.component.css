@@ -8,6 +8,11 @@
   outline: none;
 }
 
-/**:focus {*/
-/*  outline: 0 !important;*/
-/*}*/
+.navbar-light .navbar-nav .nav-link {
+  color: #1E2188;
+}
+
+.highlight {
+  color: #1E2188;
+  font-weight: 700;
+}

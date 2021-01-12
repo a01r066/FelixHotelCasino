@@ -7,17 +7,21 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
+  tabs = ['EVENTS', 'PROMOTIONAL VIDEOS'];
+  selectedIndex = 0;
+
   constructor(private router: Router,
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
-  viewEvents(){
-    this.router.navigate(['list'], { relativeTo: this.route });
-  }
-
-  viewPromotionalVideos(){
-    this.router.navigate(['promotional-videos'], { relativeTo: this.route });
+  onSelect(index: number){
+    this.selectedIndex = index;
+    if(index === 0){
+      this.router.navigate(['list'], { relativeTo: this.route });
+    } else {
+      this.router.navigate(['promotional-videos'], { relativeTo: this.route });
+    }
   }
 }

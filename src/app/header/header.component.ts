@@ -9,13 +9,15 @@ import {Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
   links = ["HOME", "ABOUT", "HOTEL", "CASINO", "EVENTS", "CONTACT"];
   isCasino = false;
+  selectedIndex = 0;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  openLink(link: string){
+  openLink(link: string, index: number){
+    this.selectedIndex = index;
     let strLink = link.toLowerCase();
     if(strLink === 'events'){
       strLink += '/list';
