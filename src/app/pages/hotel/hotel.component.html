@@ -1,0 +1,33 @@
+<section class="page-heading">
+  <div class="container">
+    <div class="row" style="justify-content: center">
+      <div class="col-md-12">
+        <h1>Hotel</h1>
+        <p>Whatever drinking vinegar hella fingerstache shoreditch kickstarter kitsch. La croix hella iceland flexitarian letterpress.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="tabs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2" style="margin: 16px auto">
+        <ul class="flex-column">
+          <li class="nav-item" (click)="viewFacility()">
+            <a class="nav-link active">FACILITIES</a>
+          </li>
+          <li class="nav-item" (click)="viewRooms()">
+            <a class="nav-link">ROOMS</a>
+          </li>
+        </ul>
+<!--        <ul class="list-group list-group-flush" style="margin-top: 16px;">-->
+<!--          <li (click)="viewFacility()" class="list-group-item" style="font-size: 1.5rem; background-color: transparent">FACILITIES</li>-->
+<!--          <li (click)="viewRooms()" class="list-group-item" style="font-size: 1.5rem; background-color: transparent">ROOMS</li>-->
+<!--        </ul>-->
+      </div>
+      <div class="col-md-10">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
