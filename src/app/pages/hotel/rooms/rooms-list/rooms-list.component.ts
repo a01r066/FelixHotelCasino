@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Room} from '../room.model';
-import {RoomCategory} from '../room-category.model';
-import {DataService} from '../../../data-services/data.service';
-import {UiService} from '../../../data-services/ui.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {RoomCategory} from '../room-category.model';
+import {Room} from '../room.model';
+import {UiService} from '../../../../data-services/ui.service';
+import {DataService} from '../../../../data-services/data.service';
 
 @Component({
   selector: 'app-rooms-list',

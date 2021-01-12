@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  links = ["HOME", "ABOUT", "ROOMS", "CASINO", "EVENTS", "CONTACT"];
+  links = ["HOME", "ABOUT", "HOTEL", "CASINO", "EVENTS", "CONTACT"];
   isCasino = false;
 
   constructor(private router: Router) { }

@@ -11,7 +11,7 @@ import { GetAppComponent } from './get-app/get-app.component';
 import { FeaturedFoodComponent } from './featured-food/featured-food.component';
 import { OurBlogComponent } from './our-blog/our-blog.component';
 import { AboutComponent } from './pages/about/about.component';
-import { RoomsComponent } from './pages/rooms/rooms.component';
+import { RoomsComponent } from './pages/hotel/rooms/rooms.component';
 import { CasinoComponent } from './pages/casino/casino.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { EventsComponent } from './pages/events/events.component';
@@ -30,16 +30,18 @@ import {environment} from '../environments/environment';
 import firebase from 'firebase';
 import {EventsListComponent} from './pages/events/events-list/events-list.component';
 import {EventsDetailComponent} from './pages/events/events-detail/events-detail.component';
-import {RoomsListComponent} from './pages/rooms/rooms-list/rooms-list.component';
-import {RoomsDetailComponent} from './pages/rooms/rooms-detail/rooms-detail.component';
+import {RoomsListComponent} from './pages/hotel/rooms/rooms-list/rooms-list.component';
+import {RoomsDetailComponent} from './pages/hotel/rooms/rooms-detail/rooms-detail.component';
 import { FacilitiesComponent } from './pages/casino/facilities/facilities.component';
 import { GamesComponent } from './pages/casino/games/games.component';
 import { GameDetailComponent } from './pages/casino/games/game-detail/game-detail.component';
 import { GamesListComponent } from './pages/casino/games/games-list/games-list.component';
 import {NgImageSliderModule} from 'ng-image-slider';
-import { BookRoomComponent } from './pages/rooms/rooms-detail/book-room/book-room.component';
+import { BookRoomComponent } from './pages/hotel/rooms/rooms-detail/book-room/book-room.component';
 import {DpDatePickerModule} from 'ng2-date-picker';
 import {FormsModule} from '@angular/forms';
+import { HotelComponent } from './pages/hotel/hotel.component';
+import {HotelFacilityComponent} from './pages/hotel/hotel-facility/hotel-facility.component';
 
 firebase.initializeApp(environment.firebase);
 
@@ -70,7 +72,9 @@ firebase.initializeApp(environment.firebase);
     GamesComponent,
     GameDetailComponent,
     GamesListComponent,
-    BookRoomComponent
+    BookRoomComponent,
+    HotelFacilityComponent,
+    HotelComponent
   ],
     imports: [
         BrowserModule,

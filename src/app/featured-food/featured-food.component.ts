@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Room} from '../pages/rooms/room.model';
 import {DataService} from '../data-services/data.service';
 import {UiService} from '../data-services/ui.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Room} from '../pages/hotel/rooms/room.model';
 
 @Component({
   selector: 'app-featured-food',
