@@ -28,8 +28,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {environment} from '../environments/environment';
 import firebase from 'firebase';
-import {EventsListComponent} from './pages/events/events-list/events-list.component';
-import {EventsDetailComponent} from './pages/events/events-detail/events-detail.component';
+import {EventsListComponent} from './pages/events/events-container/events-list/events-list.component';
+import {EventsDetailComponent} from './pages/events/events-container/events-detail/events-detail.component';
 import {RoomsListComponent} from './pages/hotel/rooms/rooms-list/rooms-list.component';
 import {RoomsDetailComponent} from './pages/hotel/rooms/rooms-detail/rooms-detail.component';
 import { FacilitiesComponent } from './pages/casino/facilities/facilities.component';
@@ -42,6 +42,8 @@ import {DpDatePickerModule} from 'ng2-date-picker';
 import {FormsModule} from '@angular/forms';
 import { HotelComponent } from './pages/hotel/hotel.component';
 import {HotelFacilityComponent} from './pages/hotel/hotel-facility/hotel-facility.component';
+import { PromotionalVideoComponent } from './pages/events/promotional-video/promotional-video.component';
+import { EventsContainerComponent } from './pages/events/events-container/events-container.component';
 
 firebase.initializeApp(environment.firebase);
 
@@ -74,7 +76,9 @@ firebase.initializeApp(environment.firebase);
     GamesListComponent,
     BookRoomComponent,
     HotelFacilityComponent,
-    HotelComponent
+    HotelComponent,
+    PromotionalVideoComponent,
+    EventsContainerComponent
   ],
     imports: [
         BrowserModule,

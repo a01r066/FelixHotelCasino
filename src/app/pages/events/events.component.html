@@ -12,10 +12,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-2" style="margin: 16px auto">
-        <ul class="list-group list-group-flush" style="margin-top: 16px;">
-          <li class="list-group-item" style="font-size: 1.5rem; background-color: transparent">CURRENT EVENT</li>
-          <li class="list-group-item" style="font-size: 1.5rem; background-color: transparent">CLOSED EVENT</li>
-          <li class="list-group-item" style="font-size: 1.5rem; background-color: transparent">PROMOTIONAL VIDEO</li>
+        <ul class="flex-column">
+          <li class="nav-item" (click)="viewEvents()">
+            <a class="nav-link active">EVENTS</a>
+          </li>
+          <li class="nav-item" (click)="viewPromotionalVideos()">
+            <a class="nav-link">PROMOTIONAL VIDEOS</a>
+          </li>
         </ul>
       </div>
       <div class="col-md-10"><router-outlet></router-outlet></div>

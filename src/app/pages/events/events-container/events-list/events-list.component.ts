@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {EventModel} from '../event.model';
-import {DataService} from '../../../data-services/data.service';
-import {UiService} from '../../../data-services/ui.service';
+import {EventModel} from '../../event.model';
+import {DataService} from '../../../../data-services/data.service';
+import {UiService} from '../../../../data-services/ui.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({

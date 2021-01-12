@@ -5,6 +5,7 @@ import {UiService} from './ui.service';
 import {Room} from '../pages/hotel/rooms/room.model';
 import {EventModel} from '../pages/events/event.model';
 import {Slide} from '../pages/about/slide.model';
+import {Clip} from '../pages/events/promotional-video/clip.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,24 @@ export class DataService {
   selectedEvent: EventModel;
 
   constructor(private uiService: UiService) {
+  }
+
+  getPromotionalVideos(){
+    const clips: Clip[] = [];
+    this.database.ref('Events-Clips').once('value').then(snapshot => {
+      snapshot.forEach(clipSnapshot => {
+        const id = clipSnapshot.key;
+        const dataObj = {
+          title: clipSnapshot.val().title,
+          desc: clipSnapshot.val().desc,
+          videoPath: clipSnapshot.val().videoPath,
+          period: clipSnapshot.val().period
+        };
+        const clip = new Clip(id, dataObj);
+        clips.push(clip);
+      });
+      this.uiService.clipsSub.next(clips);
+    });
   }
 
   getSlides(){

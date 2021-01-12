@@ -13,9 +13,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-2" style="margin: 16px auto">
-        <ul class="list-group list-group-flush" style="margin-top: 16px;">
-          <li class="list-group-item" style="font-size: 1.5rem; background-color: transparent">FACILITIES</li>
-          <li class="list-group-item" style="font-size: 1.5rem; background-color: transparent">GAME GUIDES</li>
+        <ul class="flex-column">
+          <li class="nav-item" (click)="viewFacility()">
+            <a class="nav-link active">FACILITIES</a>
+          </li>
+          <li class="nav-item" (click)="viewGames()">
+            <a class="nav-link">GAME GUIDES</a>
+          </li>
         </ul>
       </div>
       <div class="col-md-10"><router-outlet></router-outlet></div>

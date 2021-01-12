@@ -14,4 +14,13 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  openLink(link: string){
+    let strLink = link.toLowerCase();
+    if(strLink === 'events'){
+      strLink += '/list';
+    }
+    console.log(strLink);
+    this.router.navigate([strLink]);
+  }
 }

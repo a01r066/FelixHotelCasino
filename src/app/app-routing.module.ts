@@ -5,8 +5,8 @@ import {AboutComponent} from './pages/about/about.component';
 import {CasinoComponent} from './pages/casino/casino.component';
 import {EventsComponent} from './pages/events/events.component';
 import {ContactComponent} from './pages/contact/contact.component';
-import { EventsListComponent } from './pages/events/events-list/events-list.component';
-import { EventsDetailComponent } from './pages/events/events-detail/events-detail.component';
+import { EventsListComponent } from './pages/events/events-container/events-list/events-list.component';
+import { EventsDetailComponent } from './pages/events/events-container/events-detail/events-detail.component';
 import {CommonModule} from '@angular/common';
 import {FacilitiesComponent} from './pages/casino/facilities/facilities.component';
 import {GamesComponent} from './pages/casino/games/games.component';
@@ -18,6 +18,8 @@ import {RoomsDetailComponent} from './pages/hotel/rooms/rooms-detail/rooms-detai
 import {HotelComponent} from './pages/hotel/hotel.component';
 import {HotelFacilityComponent} from './pages/hotel/hotel-facility/hotel-facility.component';
 import {RoomsComponent} from './pages/hotel/rooms/rooms.component';
+import {PromotionalVideoComponent} from './pages/events/promotional-video/promotional-video.component';
+import {EventsContainerComponent} from './pages/events/events-container/events-container.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -39,8 +41,11 @@ const routes: Routes = [
         ]}
     ] },
   { path: 'events', component: EventsComponent, children: [
-      { path: '', component: EventsListComponent },
-      { path: ':id', component: EventsDetailComponent }
+      { path: 'list', component: EventsContainerComponent, children: [
+          { path: '', component: EventsListComponent },
+          { path: ':id', component: EventsDetailComponent }
+        ] },
+      { path: 'promotional-videos', component: PromotionalVideoComponent }
     ] },
   { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }

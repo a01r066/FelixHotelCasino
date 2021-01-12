@@ -28,6 +28,6 @@ export class FeaturedFoodComponent implements OnInit {
   viewDetail(room: Room, rooms: Room[]){
     this.dataService.selectedRoom = room;
     this.dataService.filteredRooms = rooms;
-    this.router.navigate(['rooms', room.id]);
+    this.router.navigate(['hotel', 'rooms', room.id]);
   }
 }

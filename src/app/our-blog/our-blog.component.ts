@@ -25,6 +25,6 @@ export class OurBlogComponent implements OnInit {
 
   viewDetail(event: EventModel){
     this.dataService.selectedEvent = event;
-    this.router.navigate(['events', event.title]);
+    this.router.navigate(['events/list', event.title]);
   }
 }
