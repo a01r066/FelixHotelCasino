@@ -23,7 +23,7 @@ import {EventsContainerComponent} from './pages/events/events-container/events-c
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
+  // { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'hotel', component: HotelComponent, children: [
       { path: '', component: HotelFacilityComponent },

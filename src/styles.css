@@ -17,7 +17,8 @@ ul {
 
 p {
   color: #3B2828;
-  font-size: 13px;
+  font-size: 14px;
+  text-align: justify;
   line-height: 24px;
 }
 

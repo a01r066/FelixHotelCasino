@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./games-list.component.css']
 })
 export class GamesListComponent implements OnInit {
+  selectedGame = 'baccarat';
+  games = ['BACCARAT', 'BLACKJACK', 'ROULETTE', 'TAI SAI', 'SLOT MACHINE'];
 
   constructor() { }
 

@@ -1,1 +1,15 @@
-<p>games-list works!</p>
+<section class="contact-us">
+  <div class="container">
+    <h2 style="font-weight: 700">GAME MANUAL</h2>
+    <div class="row">
+      <ul class="nav nav-tabs" style="float: left">
+        <li class="nav-item" *ngFor="let game of games; let i = index" (click)="selectedGame = game.toLowerCase()">
+          <a class="nav-link active">{{ game }}</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <app-game-detail [game]="selectedGame"></app-game-detail>
+    </div>
+  </div>
+</section>

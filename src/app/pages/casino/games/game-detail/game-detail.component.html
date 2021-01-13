@@ -1,1 +1,109 @@
-<p>game-detail works!</p>
+<section class="contact-us">
+  <ng-template [ngIf]="game === 'baccarat'">
+    <h2>BACCARAT</h2>
+    <p>Cards are dealt to the Player and Banker, and the winner is the side that is nearest to 9</p>
+    <h4>GUIDELINES</h4>
+    <h4>Game Table</h4>
+    <img class="img-thumbnail" src="https://www.7luck.com/common/images/contents/img_baccarat1.jpg" alt="">
+    <div>
+      <ul style="list-style-type: circle; margin-left: 32px; font-size: 1.5rem">
+        <li>The player places his bet on the layout, which includes the following areas: Player, Banker, Tie, and Pair.</li>
+        <li>The dealer deals two cards each to the Player and the Banker.</li>
+        <li>The dealer opens the Player’s cards and then the Banker’s. A third card may or may not be dealt to either the Player or the Banker depending on the baccarat rules.</li>
+        <li>The side with the hand closest to 9 wins, and the winner receives the amount of his original bet.(1 to 1)</li>
+      </ul>
+    </div>
+    <h4>GAME RULES</h4>
+    <h4>Value of Card</h4>
+    <img class="" src="https://www.7luck.com/common/images/contents/img_baccarat2.jpg" alt="">
+    <div>
+      <ul style="list-style-type: circle; margin-left: 32px; font-size: 1.5rem">
+        <li>Aces are valued at 1.</li>
+        <li>Kings, Queens, Jacks, and 10s are valued at 0.</li>
+        <li>Cards from 2 to 9 are taken at face value.</li>
+        <li>If the total of the cards exceeds 10, only the second digit is counted.</li>
+      </ul>
+    </div>
+    <hr>
+    <div>
+      <h5>The winner receives the amount of the original bet.(1 to 1)</h5>
+      <p>[If the Banker wins, a 5% commission is deducted]※ In no commission table, there is no deduction. However, if the banker wins with total value of 6, 50% commission will be paid to the house.</p>
+    </div>
+    <hr>
+    <div>
+      <h5>If a tie bet is won, the player receives eight times the original bet.(8 to 1)</h5>
+      <p>※ Tie : the total of the Player’s and Banker’s cards are equal</p>
+    </div>
+    <hr>
+    <div>
+      <h5>If a pair bet is won, the player receives eleven times the original bet. (11 to 1)</h5>
+      <p>※ Pair : the first two cards are the same value</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Players Rule</h5>
+      <table class="table table-bordered" style="text-align: center">
+        <thead>
+        <tr class="table-warning">
+          <th scope="col" style="width: 40%">Total of the Player’s first two cards</th>
+          <th scope="col">Drawing Rule</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>0, 1, 2, 3, 4, 5</td>
+          <td>Receives one more card</td>
+        </tr>
+        <tr>
+          <td>6, 7</td>
+          <td>Stand<br>(Player doesn’t receive additional cards and competes with the Banker)</td>
+        </tr>
+        <tr>
+          <td>8, 9</td>
+          <td>Natural<br>(Player and Banker compete without receiving any additional cards)</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr>
+    <div>
+      <h5>Banker’s Rule</h5>
+      <table class="table table-bordered" style="text-align: center">
+        <thead>
+        <tr>
+          <th scope="col" style="width: 20%">Total of Banker’s</th>
+          <th scope="col" style="width: 40%">Additional card is given if the Player’s third card is one of the following</th>
+          <th scope="col" style="width: 40%">Additional card is not given if the Player’s third card is one of the following
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>3</td>
+          <td>0,1,2,3,4,5,6,7,9</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>2,3,4,5,6,7</td>
+          <td>0,1,8,9</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>4,5,6,7</td>
+          <td>0,1,2,3,8,9</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td colspan="2">Stand<br>(Banker doesn’t receive additional cards and competes with the Player)</td>
+        </tr>
+        <tr>
+          <td>8,9</td>
+          <td colspan="2">Natural<br>(Player and Banker compete without receiving any additional cards)</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-template>
+</section>
+
