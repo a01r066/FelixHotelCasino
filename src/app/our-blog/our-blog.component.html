@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-md-6" *ngFor="let event of events">
       <div class="blog-post" style="cursor: pointer" (click)="viewDetail(event)">
-        <img src="{{ event.imagePath }}" alt="">
+        <img class="img-thumbnail" src="{{ event.imagePath }}" alt="">
         <div class="right-content">
           <h4>{{ event.title }}</h4>
           <span>Period: {{ event?.dateStart }} ~ {{ event?.dateEnd }}</span>

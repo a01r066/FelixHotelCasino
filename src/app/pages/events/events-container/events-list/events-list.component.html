@@ -8,7 +8,7 @@
             <h4>{{ event.title }}</h4>
             <span>Period: {{ event?.dateStart }} ~ {{ event?.dateEnd }}</span>
           </div>
-          <img src="{{ event.imagePath }}" alt="">
+          <img src="{{ event.imagePath }}" alt="" @fadeSlideInOut>
         </div>
         <hr>
       </div>

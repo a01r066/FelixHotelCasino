@@ -4,11 +4,23 @@ import {RoomCategory} from '../room-category.model';
 import {Room} from '../room.model';
 import {UiService} from '../../../../data-services/ui.service';
 import {DataService} from '../../../../data-services/data.service';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-rooms-list',
   templateUrl: './rooms-list.component.html',
-  styleUrls: ['./rooms-list.component.css']
+  styleUrls: ['./rooms-list.component.css'],
+  animations: [
+    trigger('fadeSlideInOut', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(10px)' }),
+        animate('500ms', style({ opacity: 1, transform: 'translateY(0)' })),
+      ]),
+      transition(':leave', [
+        animate('500ms', style({ opacity: 0, transform: 'translateY(10px)' })),
+      ]),
+    ])
+  ]
 })
 export class RoomsListComponent implements OnInit {
   roomLists: Room[][] = [];

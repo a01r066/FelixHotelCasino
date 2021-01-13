@@ -1,10 +1,11 @@
 <section class="contact-us">
+<!--  BACCARAT-->
   <ng-template [ngIf]="game === 'baccarat'">
     <h2>BACCARAT</h2>
     <p>Cards are dealt to the Player and Banker, and the winner is the side that is nearest to 9</p>
     <h4>GUIDELINES</h4>
     <h4>Game Table</h4>
-    <img class="img-thumbnail" src="https://www.7luck.com/common/images/contents/img_baccarat1.jpg" alt="">
+    <img class="img-thumbnail" src="https://www.7luck.com/common/images/contents/img_baccarat1.jpg" alt="" @fadeSlideInOut>
     <div>
       <ul style="list-style-type: circle; margin-left: 32px; font-size: 1.5rem">
         <li>The player places his bet on the layout, which includes the following areas: Player, Banker, Tie, and Pair.</li>
@@ -15,7 +16,7 @@
     </div>
     <h4>GAME RULES</h4>
     <h4>Value of Card</h4>
-    <img class="" src="https://www.7luck.com/common/images/contents/img_baccarat2.jpg" alt="">
+    <img class="" src="https://www.7luck.com/common/images/contents/img_baccarat2.jpg" alt="" @fadeSlideInOut>
     <div>
       <ul style="list-style-type: circle; margin-left: 32px; font-size: 1.5rem">
         <li>Aces are valued at 1.</li>
@@ -56,11 +57,11 @@
         </tr>
         <tr>
           <td>6, 7</td>
-          <td>Stand<br>(Player doesn’t receive additional cards and competes with the Banker)</td>
+          <td><span style="font-weight: bold">Stand</span><br>(Player doesn’t receive additional cards and competes with the Banker)</td>
         </tr>
         <tr>
           <td>8, 9</td>
-          <td>Natural<br>(Player and Banker compete without receiving any additional cards)</td>
+          <td><span style="font-weight: bold">Natural</span><br>(Player and Banker compete without receiving any additional cards)</td>
         </tr>
         </tbody>
       </table>
@@ -70,7 +71,7 @@
       <h5>Banker’s Rule</h5>
       <table class="table table-bordered" style="text-align: center">
         <thead>
-        <tr>
+        <tr class="table-warning">
           <th scope="col" style="width: 20%">Total of Banker’s</th>
           <th scope="col" style="width: 40%">Additional card is given if the Player’s third card is one of the following</th>
           <th scope="col" style="width: 40%">Additional card is not given if the Player’s third card is one of the following
@@ -95,14 +96,112 @@
         </tr>
         <tr>
           <td>7</td>
-          <td colspan="2">Stand<br>(Banker doesn’t receive additional cards and competes with the Player)</td>
+          <td colspan="2"><span style="font-weight: bold">Stand</span><br>(Banker doesn’t receive additional cards and competes with the Player)</td>
         </tr>
         <tr>
           <td>8,9</td>
-          <td colspan="2">Natural<br>(Player and Banker compete without receiving any additional cards)</td>
+          <td colspan="2"><span style="font-weight: bold">Natural</span><br>(Player and Banker compete without receiving any additional cards)</td>
         </tr>
         </tbody>
       </table>
+    </div>
+    <hr>
+  </ng-template>
+<!--  BLACKJACK-->
+  <ng-template [ngIf]="game === 'blackjack'" [ngIfElse]="updating">
+    <h2>BLACKJACK</h2>
+    <p>Blackjack is one of the most popular card games in casino, lt also known as"Twenty-one." The person with the hand closest to 21 wins</p>
+    <h4>GUIDELINES</h4>
+    <h4>Game Table</h4>
+    <img class="img-thumbnail" src="https://www.7luck.com/common/images/contents/img_blackjack1.jpg" alt="" @fadeSlideInOut>
+    <h4>Hand Combination</h4>
+    <img class="img-thumbnail" src="https://www.7luck.com/common/images/contents/img_blackjack2.jpg" alt="" @fadeSlideInOut>
+    <div>
+      <ul style="list-style-type: circle; margin-left: 32px; font-size: 1.5rem">
+        <li>After betting, all players and the dealer receive two cards.</li>
+        <li>The dealer places one of his cards face-up.</li>
+        <li>The dealer must take cards until his hand reaches 17.</li>
+        <li>A player may receive additional cards (“hit”) as long as his hand does not exceed 21, or he may stay with his given hand.</li>
+      </ul>
+    </div>
+    <h4>GAME RULES</h4>
+    <h4>Value of Card</h4>
+    <img class="" src="https://www.7luck.com/common/images/contents/img_baccarat2.jpg" alt="" @fadeSlideInOut>
+    <div>
+      <ul style="list-style-type: circle; margin-left: 32px; font-size: 1.5rem">
+        <li>Aces are worth either 1 or 11, whichever is preferable</li>
+        <li>King, Queen, Jack are worth 10 respectively</li>
+        <li>Other cards are represented by their number on the card.</li>
+      </ul>
+    </div>
+    <hr>
+    <div>
+      <h5>Blackjack</h5>
+      <p>Aces are worth either 1 or 11, whichever is preferable</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Bust</h5>
+      <p>When a player’s first two cards total 21, he is paid 1.5 times the amount of the bet. (1.5 to 1)</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Push</h5>
+      <p>If a player’s and dealer’s hands are equal, a tie results.</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Stay</h5>
+      <img src="https://www.7luck.com/common/images/contents/ico_stay.gif" alt="" @fadeSlideInOut>
+      <p>ave your hand from left to right.<br>
+        Wave your hand from left to right A player does not want any additional cards. If the dealer’s hand exceeds 17, he cannot take any further cards.</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Hit</h5>
+      <img src="https://www.7luck.com/common/images/contents/ico_hit.gif" alt="" @fadeSlideInOut>
+      <p>Tap the table with a finger<br>
+        Tap the table with a finger. A player asks the dealer for another card in addition to his first two cards</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Pair Bet</h5>
+      <p>If a player anticipates that the first two cards are pair cards, he can place a pair bet. If he gets pair cards, he will be paid 11 times amount of the bet..</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Surrender</h5>
+      <p>When a player thinks that his first two cards cannot beat the dealer’s cards, he may surrender the game and forfeit half of his initial bet.</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Insurance</h5>
+      <p>When the dealer’s face-up card is an ace, players can post insurance of up to half the initial bet.<br>
+        - If the dealer has a blackjack, insurance bet pays 2 to 1.<br>
+        - If the dealer doesn’t have a blackjack, insurance bet is lost.</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Even Money</h5>
+      <p>If a player’s first two cards are blackjack and the dealer’s face-up card is an ace, the player may choose even money. In this case, the player will be paid for the original bet.<br>
+        (If the player does not choose even money and the dealer’s hand is blackjack, it will be a push)</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Double Down</h5>
+      <p>If a player requests, he may place an additional bet not exceeding the current bet, and receive only one additional card.</p>
+    </div>
+    <hr>
+    <div>
+      <h5>Split</h5>
+      <p>If a player’s first two cards are of the equal value, he may split them into two hands and bet on each hand separately. The amount of the bet must equal the initial bet.</p>
+    </div>
+    <hr>
+  </ng-template>
+<!--  UPDATING-->
+  <ng-template #updating>
+    <div class="row" style="justify-content: center">
+      <h3>To be updating...</h3>
     </div>
   </ng-template>
 </section>

@@ -9,7 +9,7 @@
       <div class="col-md-4" *ngFor="let room of rooms">
         <div class="food-item" (click)="viewDetail(room, rooms)" style="cursor: pointer">
           <h2>{{ room.title }}</h2>
-          <img class="img-thumbnail" src="{{ room.imagePaths[0] }}" alt="">
+          <img class="img-thumbnail" src="{{ room.imagePaths[0] }}" alt="" @fadeSlideInOut>
           <div class="price">{{ room.ratesFrom | currency: 'USD': true: '.0'}}</div>
           <div class="text-content">
             <!--          <h4>Kale Chips Art Party</h4>-->
