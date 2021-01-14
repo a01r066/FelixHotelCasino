@@ -15,4 +15,5 @@ export class UiService {
   eventsSub = new Subject<EventModel[]>();
   clipsSub = new Subject<Clip[]>();
   slidesSub = new Subject<Slide[]>();
+  alertChangedSub = new Subject<boolean>();
 }

@@ -14,21 +14,21 @@
         <div style="margin: 16px auto">
           <h1>Reservation Details</h1>
         </div>
-        <form>
+        <form [formGroup]="bookingForm" (ngSubmit)="onBookNow()">
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="arrivalDate">Check in *</label>
-              <input type="date" class="form-control" id="arrivalDate" placeholder="MM/dd/yyyy">
+              <input type="date" formControlName="arrivalDate" class="form-control" id="arrivalDate" placeholder="MM/dd/yyyy">
             </div>
             <div class="form-group col-md-6">
-              <label for="departDate">Check out *</label>
-              <input type="date" class="form-control" id="departDate" placeholder="MM/dd/yyyy">
+              <label for="departureDate">Check out *</label>
+              <input type="date" formControlName="departureDate" class="form-control" id="departureDate" placeholder="MM/dd/yyyy">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-5">
               <label for="adultState">Adults</label>
-              <select id="adultState" class="form-control">
+              <select id="adultState" formControlName="adultState" class="form-control">
                 <option selected>1</option>
                 <option>1</option>
                 <option>2</option>
@@ -40,7 +40,7 @@
             </div>
             <div class="form-group col-md-5">
               <label for="roomState">Rooms</label>
-              <select id="roomState" class="form-control">
+              <select id="roomState" formControlName="roomState" class="form-control">
                 <option selected>1</option>
                 <option>1</option>
                 <option>2</option>
@@ -52,7 +52,7 @@
             </div>
             <div class="form-group col-md-2">
               <label for="childrenState">Children</label>
-              <select id="childrenState" class="form-control">
+              <select id="childrenState" formControlName="childrenState" class="form-control">
                 <option selected>0</option>
                 <option>1</option>
                 <option>2</option>
@@ -67,28 +67,28 @@
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="fullname">Full Name *</label>
-              <input type="text" class="form-control" id="fullname" placeholder="">
+              <input type="text" formControlName="fullName" class="form-control" id="fullname" placeholder="">
             </div>
             <div class="form-group col-md-6">
               <label for="inputEmail">Email Address *</label>
-              <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="">
+              <input type="email" formControlName="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="subject" placeholder="">
+              <input type="text" formControlName="subject" class="form-control" id="subject" placeholder="">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="textArea">Additional Information *</label>
-              <textarea class="form-control" id="textArea" rows="5"></textarea>
+              <textarea formControlName="additionalInfo" class="form-control" id="textArea" rows="5"></textarea>
             </div>
           </div>
           <div class="form-row">
             <div class="col-md-12" style="left: 45%">
-              <button type="submit" class="btn btn-success">BOOK NOW</button>
+              <button type="submit" class="btn btn-success" [disabled]="bookingForm.invalid">BOOK NOW</button>
             </div>
           </div>
         </form>

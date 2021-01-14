@@ -3,4 +3,8 @@
 <!--<div [@routeAnimations]="prepareRoute(outlet)">-->
 <!--  <router-outlet #outlet="outlet"></router-outlet>-->
 <!--</div>-->
+<app-scroll-to-top></app-scroll-to-top>
 <app-footer></app-footer>
+<ng-template [ngIf]="isAlertShow">
+  <app-alert></app-alert>
+</ng-template>

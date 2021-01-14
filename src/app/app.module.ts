@@ -39,11 +39,13 @@ import { GamesListComponent } from './pages/casino/games/games-list/games-list.c
 import {NgImageSliderModule} from 'ng-image-slider';
 import { BookRoomComponent } from './pages/hotel/rooms/rooms-detail/book-room/book-room.component';
 import {DpDatePickerModule} from 'ng2-date-picker';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HotelComponent } from './pages/hotel/hotel.component';
 import {HotelFacilityComponent} from './pages/hotel/hotel-facility/hotel-facility.component';
 import { PromotionalVideoComponent } from './pages/events/promotional-video/promotional-video.component';
 import { EventsContainerComponent } from './pages/events/events-container/events-container.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { AlertComponent } from './shared/alert/alert.component';
 
 firebase.initializeApp(environment.firebase);
 
@@ -78,7 +80,9 @@ firebase.initializeApp(environment.firebase);
     HotelFacilityComponent,
     HotelComponent,
     PromotionalVideoComponent,
-    EventsContainerComponent
+    EventsContainerComponent,
+    ScrollToTopComponent,
+    AlertComponent
   ],
     imports: [
         BrowserModule,
@@ -92,7 +96,8 @@ firebase.initializeApp(environment.firebase);
         AngularFireStorageModule,
         NgImageSliderModule,
         DpDatePickerModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
