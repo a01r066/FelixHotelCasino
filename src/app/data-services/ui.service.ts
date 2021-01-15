@@ -16,4 +16,6 @@ export class UiService {
   clipsSub = new Subject<Clip[]>();
   slidesSub = new Subject<Slide[]>();
   alertChangedSub = new Subject<boolean>();
+  authChangedSub = new Subject<boolean>();
+  loadingStateChangedSub = new Subject<boolean>();
 }

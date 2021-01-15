@@ -17,7 +17,6 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { EventsComponent } from './pages/events/events.component';
 import { HomeComponent } from './pages/home/home.component';
 import {AppRoutingModule} from './app-routing.module';
-import { SignUpComponent } from './pages/auth/sign-up/sign-up.component';
 import { FooterComponent } from './footer/footer.component';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFireStorageModule} from '@angular/fire/storage';
@@ -46,6 +45,9 @@ import { PromotionalVideoComponent } from './pages/events/promotional-video/prom
 import { EventsContainerComponent } from './pages/events/events-container/events-container.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { AlertComponent } from './shared/alert/alert.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import {AuthModule} from './auth/auth.module';
+import {EncryptDecryptService} from './data-services/encrypt-decrypt.service';
 
 firebase.initializeApp(environment.firebase);
 
@@ -66,7 +68,6 @@ firebase.initializeApp(environment.firebase);
     ContactComponent,
     EventsComponent,
     HomeComponent,
-    SignUpComponent,
     FooterComponent,
     EventsListComponent,
     EventsDetailComponent,
@@ -82,7 +83,8 @@ firebase.initializeApp(environment.firebase);
     PromotionalVideoComponent,
     EventsContainerComponent,
     ScrollToTopComponent,
-    AlertComponent
+    AlertComponent,
+    DashboardComponent
   ],
     imports: [
         BrowserModule,
@@ -97,9 +99,10 @@ firebase.initializeApp(environment.firebase);
         NgImageSliderModule,
         DpDatePickerModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        AuthModule
     ],
-  providers: [],
+  providers: [EncryptDecryptService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
