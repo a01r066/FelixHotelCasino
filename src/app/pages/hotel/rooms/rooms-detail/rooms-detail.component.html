@@ -8,9 +8,9 @@
 <!--            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan.</h3>-->
             <p>{{ selectedRoom.desc }}</p>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item room-feature">BEDS <span style="float: right">{{ selectedRoom.beds }}</span></li>
-              <li class="list-group-item room-feature">OCCUPANCY <span style="float: right">{{ selectedRoom.occupancy }}</span></li>
-              <li class="list-group-item room-feature">SIZE <span style="float: right">{{ selectedRoom.size }}</span></li>
+              <li class="list-group-item room-feature">BEDS <span style="float: right">{{ selectedRoom.beds }} bed(s)</span></li>
+              <li class="list-group-item room-feature">OCCUPANCY <span style="float: right">{{ selectedRoom.occupancy }} Persons</span></li>
+              <li class="list-group-item room-feature">SIZE <span style="float: right">{{ selectedRoom.size }} sqm</span></li>
               <li class="list-group-item room-feature">VIEW <span style="float: right">{{ selectedRoom.view }}</span></li>
               <li class="list-group-item room-feature">RATES FROM <span style="float: right">{{ selectedRoom.ratesFrom | currency: 'USD': true: '.0' }}</span></li>
             </ul>
@@ -36,12 +36,18 @@
               <div class="price">{{ room.ratesFrom | currency: 'USD': true: '.0'}}</div>
               <div class="text-content">
                 <!--          <h4>Kale Chips Art Party</h4>-->
-                <p>{{ room.desc.slice(0, 96) }}</p>
+<!--                <p>{{ room.desc.slice(0, 96) }}</p>-->
+                <ul class="list-group list-group-flush room-info">
+                  <li class="list-group-item room-feature">BEDS <span style="float: right">{{ room.beds }} bed(s)</span></li>
+                  <li class="list-group-item room-feature">SIZE <span style="float: right">{{ room.size }} sqm</span></li>
+                  <li class="list-group-item room-feature">RATES FROM <span style="float: right">{{ room.ratesFrom | currency: 'USD': true: '.0' }}</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <br>
   </div>
 </section>

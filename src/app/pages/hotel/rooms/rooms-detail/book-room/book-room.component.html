@@ -100,9 +100,9 @@
           <div class="price">{{ selectedRoom.ratesFrom | currency: 'USD': true: '.0'}}</div>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item room-feature">BEDS <span style="float: right">{{ selectedRoom.beds }}</span></li>
-          <li class="list-group-item room-feature">OCCUPANCY <span style="float: right">{{ selectedRoom.occupancy }}</span></li>
-          <li class="list-group-item room-feature">SIZE <span style="float: right">{{ selectedRoom.size }}</span></li>
+          <li class="list-group-item room-feature">BEDS <span style="float: right">{{ selectedRoom.beds }} bed(s)</span></li>
+          <li class="list-group-item room-feature">OCCUPANCY <span style="float: right">{{ selectedRoom.occupancy }} Persons</span></li>
+          <li class="list-group-item room-feature">SIZE <span style="float: right">{{ selectedRoom.size }} sqm</span></li>
           <li class="list-group-item room-feature">VIEW <span style="float: right">{{ selectedRoom.view }}</span></li>
           <li class="list-group-item room-feature">RATES FROM <span style="float: right">{{ selectedRoom.ratesFrom | currency: 'USD': true: '.0' }}</span></li>
         </ul>

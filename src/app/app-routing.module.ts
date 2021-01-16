@@ -24,6 +24,7 @@ import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { animation: 'HomePage'} },
+  { path: 'home', component: HomeComponent, data: { animation: 'HomePage'} },
   { path: 'about', component: AboutComponent, data: { animation: 'AboutPage'} },
   { path: 'hotel', component: HotelComponent, children: [
       { path: '', component: HotelFacilityComponent },

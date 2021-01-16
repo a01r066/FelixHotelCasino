@@ -40,7 +40,6 @@ export class AdRoomsListComponent implements OnInit {
   }
 
   addRoom(room: Room){
-    console.log("Category: " + room.roomCateID);
     this.router.navigate(['room', room.roomCateID], { relativeTo: this.route });
   }
 }

@@ -6,3 +6,7 @@ a:hover {
 a>h2:hover {
   color: #58B531;
 }
+
+.room-info {
+  font-size: 1.25rem;
+}

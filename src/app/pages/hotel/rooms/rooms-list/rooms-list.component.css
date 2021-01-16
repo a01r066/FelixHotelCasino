@@ -1,3 +1,7 @@
 .room-item {
   cursor: pointer;
 }
+
+.room-info {
+  font-size: 1.25rem;
+}

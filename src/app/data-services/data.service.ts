@@ -86,6 +86,11 @@ export class DataService {
   //   return this.filteredRooms;
   // }
 
+  addRoom(formData: any, cateID: string){
+    console.log(formData);
+    this.database.ref('Rooms').child(cateID).push(formData);
+  }
+
   getRoomLists(){
     const roomLists: Room[][] = [];
     this.database.ref('Rooms').once('value').then(snapshot => {

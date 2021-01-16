@@ -13,8 +13,13 @@
           <div class="price">{{ room.ratesFrom | currency: 'USD': true: '.0'}}</div>
           <div class="text-content">
             <!--          <h4>Kale Chips Art Party</h4>-->
-            <p>{{ room.desc.slice(0, 96) }}</p>
-            <button class="btn btn-success" style="font-size: 1.3rem">View Detail</button>
+<!--            <p>{{ room.desc.slice(0, 96) }}</p>-->
+            <ul class="list-group list-group-flush room-info">
+              <li class="list-group-item room-feature">BEDS <span style="float: right">{{ room.beds }} bed(s)</span></li>
+              <li class="list-group-item room-feature">SIZE <span style="float: right">{{ room.size }} sqm</span></li>
+              <li class="list-group-item room-feature">RATES FROM <span style="float: right">{{ room.ratesFrom | currency: 'USD': true: '.0' }}</span></li>
+            </ul>
+            <button class="btn btn-success" style="font-size: 1.3rem; margin-top: 8px">View Detail</button>
           </div>
         </div>
       </div>

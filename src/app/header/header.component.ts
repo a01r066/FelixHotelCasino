@@ -8,7 +8,6 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   links = ["HOME", "ABOUT", "HOTEL", "CASINO", "EVENTS", "CONTACT"];
-  isCasino = false;
   selectedIndex = 0;
 
   constructor(private router: Router) { }
@@ -22,7 +21,6 @@ export class HeaderComponent implements OnInit {
     if(strLink === 'events'){
       strLink += '/list';
     }
-    console.log(strLink);
     this.router.navigate([strLink]);
   }
 }
