@@ -8,14 +8,20 @@ import {AdminComponent} from './admin.component';
 import {AuthGuard} from '../auth/auth.guard';
 import {SharedModule} from '../shared/shared.module';
 import {AuthModule} from '../auth/auth.module';
+import {AdEventsComponent} from './dashboard/ad-events/ad-events.component';
+import {AdMoreRoomComponent} from './dashboard/ad-rooms/ad-more-room/ad-more-room.component';
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
   { path: 'dashboard', component: DashboardComponent, children: [
-      { path: 'rooms', component: AdRoomsComponent, children: [
+      { path: 'events', component: AdEventsComponent },
+      {
+        path: 'rooms', component: AdRoomsComponent, children: [
           { path: '', component: AdRoomsListComponent },
-          { path: ':id', component: AdRoomDetailComponent }
-        ] }
+          { path: ':id', component: AdRoomDetailComponent },
+          { path: 'room/:id', component: AdMoreRoomComponent }
+        ]
+      }
     ] }
 ];
 
@@ -31,7 +37,9 @@ const routes: Routes = [
     DashboardComponent,
     AdRoomsComponent,
     AdRoomsListComponent,
-    AdRoomDetailComponent
+    AdRoomDetailComponent,
+    AdEventsComponent,
+    AdMoreRoomComponent
   ]
 })
 export class AdminRoutingModule {

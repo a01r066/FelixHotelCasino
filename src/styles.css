@@ -964,7 +964,7 @@ section.contact-us {
   padding-left: 15px;
   font-size: 13px;
   color: #4a4a4a;
-  background-color: #f4f4f4;
+  /*background-color: #f4f4f4;*/
   outline: none !important;
   border: none;
   box-shadow: none;
@@ -980,7 +980,7 @@ section.contact-us {
   padding-top: 10px;
   font-size: 13px;
   color: #4a4a4a;
-  background-color: #f4f4f4;
+  /*background-color: #f4f4f4;*/
   outline: none;
   border: none;
   box-shadow: none;

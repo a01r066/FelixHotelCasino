@@ -5,10 +5,10 @@ import {AdRoomsComponent} from './dashboard/ad-rooms/ad-rooms.component';
 import {AdRoomsListComponent} from './dashboard/ad-rooms/ad-rooms-list/ad-rooms-list.component';
 import {AdRoomDetailComponent} from './dashboard/ad-rooms/ad-room-detail/ad-room-detail.component';
 import {AdminRoutingModule} from './admin-routing.module';
-import {SharedModule} from '../shared/shared.module';
 import {AuthModule} from '../auth/auth.module';
-import {CommonModule} from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {SharedModule} from '../shared/shared.module';
+import { AdEventsComponent } from './dashboard/ad-events/ad-events.component';
+import { AdMoreRoomComponent } from './dashboard/ad-rooms/ad-more-room/ad-more-room.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +16,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     DashboardComponent,
     AdRoomsComponent,
     AdRoomsListComponent,
-    AdRoomDetailComponent
+    AdRoomDetailComponent,
+    AdEventsComponent,
+    AdMoreRoomComponent,
   ],
   imports: [
+    SharedModule,
     AdminRoutingModule,
     AuthModule
   ]

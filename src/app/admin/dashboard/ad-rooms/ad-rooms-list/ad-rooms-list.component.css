@@ -1,0 +1,11 @@
+.edit-icon {
+  font-size: 3rem;
+  color: mediumpurple;
+  cursor: pointer;
+}
+
+.delete-icon {
+  font-size: 3rem;
+  color: darkred;
+  cursor: pointer;
+}

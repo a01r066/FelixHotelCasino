@@ -1,65 +1,28 @@
 <div>
-  <h1>Room List<span style="float: right"><button class="btn">Add Room</button></span></h1>
+  <h1>Rooms List</h1>
 </div>
-<div>
-  <table class="table">
-    <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    </tbody>
-  </table>
-
+<div *ngFor="let rooms of roomLists; let i = index">
+  <div style="text-align: center; display: block; background-color: rgba(0, 0, 0, 0.25); height: 64px;"><h3 style="padding-top: 16px; font-weight: bolder">{{ roomCategories[i].title }}<span><button (click)="addRoom(rooms[i])" class="btn btn-primary" style="font-size: 1rem; width: 64px; float: right;">Add Room</button></span></h3></div>
   <table class="table">
     <thead class="thead-light">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">ROOM NAME</th>
+      <th scope="col">BEDS</th>
+      <th scope="col">RATE FROM</th>
+      <th scope="col">EDIT/DELETE</th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+    <tr *ngFor="let room of rooms; let i = index">
+      <th scope="row">{{ i+1 }}</th>
+      <td>{{ room.title }}</td>
+      <td>{{ room.beds }}</td>
+      <td>{{ room.ratesFrom | currency: 'USD': true: '.0' }}</td>
+      <td>
+        <i class="fas fa-edit edit-icon mr-4" (click)="edit(room)"></i>
+        <i class="fas fa-trash-alt delete-icon" (click)="delete(room)"></i>
+      </td>
     </tr>
     </tbody>
   </table>
