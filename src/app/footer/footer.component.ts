@@ -12,4 +12,8 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sendTo(){
+    const subject = "Inquiry about web service.";
+    window.open('mailto:vodachung2k12@gmail.com?subject=' + subject);
+  }
 }

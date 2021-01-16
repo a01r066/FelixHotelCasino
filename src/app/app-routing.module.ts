@@ -20,13 +20,10 @@ import {HotelFacilityComponent} from './pages/hotel/hotel-facility/hotel-facilit
 import {RoomsComponent} from './pages/hotel/rooms/rooms.component';
 import {PromotionalVideoComponent} from './pages/events/promotional-video/promotional-video.component';
 import {EventsContainerComponent} from './pages/events/events-container/events-container.component';
-import {DashboardComponent} from './admin/dashboard/dashboard.component';
 import {AuthGuard} from './auth/auth.guard';
 
 const routes: Routes = [
-  { path: 'admin', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: '', component: HomeComponent, data: { animation: 'HomePage'} },
-  // { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent, data: { animation: 'AboutPage'} },
   { path: 'hotel', component: HotelComponent, children: [
       { path: '', component: HotelFacilityComponent },

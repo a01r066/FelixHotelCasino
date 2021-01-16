@@ -38,16 +38,15 @@ import { GamesListComponent } from './pages/casino/games/games-list/games-list.c
 import {NgImageSliderModule} from 'ng-image-slider';
 import { BookRoomComponent } from './pages/hotel/rooms/rooms-detail/book-room/book-room.component';
 import {DpDatePickerModule} from 'ng2-date-picker';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HotelComponent } from './pages/hotel/hotel.component';
 import {HotelFacilityComponent} from './pages/hotel/hotel-facility/hotel-facility.component';
 import { PromotionalVideoComponent } from './pages/events/promotional-video/promotional-video.component';
 import { EventsContainerComponent } from './pages/events/events-container/events-container.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { AlertComponent } from './shared/alert/alert.component';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import {AuthModule} from './auth/auth.module';
 import {EncryptDecryptService} from './data-services/encrypt-decrypt.service';
+import {AdminRoutingModule} from './admin/admin-routing.module';
+import {SharedModule} from './shared/shared.module';
 
 firebase.initializeApp(environment.firebase);
 
@@ -83,10 +82,10 @@ firebase.initializeApp(environment.firebase);
     PromotionalVideoComponent,
     EventsContainerComponent,
     ScrollToTopComponent,
-    AlertComponent,
-    DashboardComponent
+    AlertComponent
   ],
     imports: [
+        SharedModule,
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
@@ -98,9 +97,7 @@ firebase.initializeApp(environment.firebase);
         AngularFireStorageModule,
         NgImageSliderModule,
         DpDatePickerModule,
-        FormsModule,
-        ReactiveFormsModule,
-        AuthModule
+        AdminRoutingModule,
     ],
   providers: [EncryptDecryptService],
   bootstrap: [AppComponent]

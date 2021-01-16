@@ -21,7 +21,7 @@ export class FeaturedFoodComponent implements OnInit {
       roomLists.forEach(rooms => {
         this.rooms.push(rooms[0]);
       });
-      this.rooms = this.rooms.slice(0, 3);
+      this.rooms = this.rooms.slice(0, 6);
     });
   }
 

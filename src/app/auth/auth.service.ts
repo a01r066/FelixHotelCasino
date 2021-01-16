@@ -48,7 +48,7 @@ export class AuthService {
     this.auth.createUserWithEmailAndPassword(email, password).then(result => {
       this.updateUserToDB(result, name, password);
       this.uiService.loadingStateChangedSub.next(false);
-      this.router.navigate(['/admin']);
+      this.router.navigate(['/dashboard']);
     })
       .catch(error => {
         // const errorCode = error.code;
@@ -77,7 +77,7 @@ export class AuthService {
     this.auth.signInWithEmailAndPassword(email, password).then(result => {
       this.uiService.loadingStateChangedSub.next(false);
       console.log("Login success!");
-      this.router.navigate(['/admin']);
+      this.router.navigate(['/dashboard']);
     })
       .catch(error => {
         // const errorCode = error.code;
