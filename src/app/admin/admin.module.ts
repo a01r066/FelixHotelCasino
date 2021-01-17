@@ -9,6 +9,7 @@ import {AuthModule} from '../auth/auth.module';
 import {SharedModule} from '../shared/shared.module';
 import { AdEventsComponent } from './dashboard/ad-events/ad-events.component';
 import { AdMoreRoomComponent } from './dashboard/ad-rooms/ad-more-room/ad-more-room.component';
+import { AdEditRoomComponent } from './dashboard/ad-rooms/ad-edit-room/ad-edit-room.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AdMoreRoomComponent } from './dashboard/ad-rooms/ad-more-room/ad-more-r
     AdRoomDetailComponent,
     AdEventsComponent,
     AdMoreRoomComponent,
+    AdEditRoomComponent,
   ],
   imports: [
     SharedModule,

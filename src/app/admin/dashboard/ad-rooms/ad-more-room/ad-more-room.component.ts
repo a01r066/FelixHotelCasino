@@ -23,6 +23,7 @@ export class AdMoreRoomComponent implements OnInit {
   ngOnInit(): void {
     const params = this.route.snapshot.params;
     this.cateID = params['id'];
+    console.log(this.cateID);
 
     this.roomFormGroup = new FormGroup({
       title: new FormControl('',{

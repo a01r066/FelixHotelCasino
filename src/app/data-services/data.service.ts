@@ -15,6 +15,7 @@ export class DataService {
   database = firebase.database();
 
   selectedRoom: Room;
+  selectedEditRoom: Room;
   filteredRooms: Room[];
 
   selectedEvent: EventModel;
@@ -85,6 +86,18 @@ export class DataService {
   //   });
   //   return this.filteredRooms;
   // }
+
+  deleteRoom(room: Room){
+    this.database.ref('Rooms').child(room.roomCateID).child(room.id).remove().then(() => {
+      this.getRoomLists();
+    });
+  }
+
+  updateRoom(formData: any, room){
+    this.database.ref('Rooms').child(room.roomCateID).child(room.id).update(formData).then(() => {
+      // this.getRoomLists();
+    });
+  }
 
   addRoom(formData: any, cateID: string){
     console.log(formData);
