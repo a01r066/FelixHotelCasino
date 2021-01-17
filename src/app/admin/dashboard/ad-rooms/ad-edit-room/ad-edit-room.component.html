@@ -1,0 +1,49 @@
+<section class="contact-us">
+  <div class="container">
+    <form [formGroup]="roomFormGroup" (ngSubmit)="onUpdate()">
+      <h1>EDIT ROOM</h1>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="title">NAME</label>
+          <input type="text" value="{{room.title}}"  formControlName="title" class="form-control" id="title" placeholder="Room name">
+
+          <div class="row">
+            <div class="col-md-6">
+              <label for="beds">BEDS</label>
+              <input type="text" value="{{room.beds}}" formControlName="beds" class="form-control" id="beds" placeholder="Number of beds">
+            </div>
+            <div class="col-md-6">
+              <label for="occupancy">OCCUPANCY</label>
+              <input type="text" value="{{room.occupancy}}" formControlName="occupancy" class="form-control" id="occupancy" placeholder="Number of persons">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <label for="size">SIZE</label>
+              <input type="text" value="{{room.size}}" formControlName="size" class="form-control" id="size" placeholder="sqm">
+            </div>
+            <div class="col-md-6">
+              <label for="view">VIEW</label>
+              <input type="text" value="{{room.view}}" formControlName="view" class="form-control" id="view" placeholder="Room view">
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="file">SELECT PHOTO</label>
+          <input type="file" (change)="fileProgress($event)" class="form-control-file" id="file">
+          <img class="img-thumbnail" style="width: 196px" src="{{ imagePath }}" alt="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="ratesFrom">RATE FROM</label>
+        <input type="text" value="{{room.ratesFrom}}" formControlName="ratesFrom" class="form-control" id="ratesFrom" placeholder="Room rate">
+      </div>
+      <div class="form-group">
+        <label for="desc">DESCRIPTION</label>
+        <textarea formControlName="desc" class="form-control" id="desc" rows="4" [value]="room.desc"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">UPDATE</button>
+    </form>
+  </div>
+</section>
