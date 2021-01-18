@@ -16,6 +16,7 @@ export class DataService {
 
   selectedRoom: Room;
   selectedEditRoom: Room;
+  selectedRoomCate: RoomCategory;
   filteredRooms: Room[];
 
   selectedEvent: EventModel;

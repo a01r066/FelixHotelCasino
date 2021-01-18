@@ -4,7 +4,7 @@
 <div *ngFor="let rooms of roomLists; let i = index">
   <div style="text-align: center; display: block; background-color: rgba(0, 0, 0, 0.25); height: 64px;">
     <h3 style="padding-top: 16px; font-weight: bolder">{{ roomCategories[i].title }}
-    <span><button (click)="addRoom(rooms[i], roomLists[i][0].roomCateID)" class="btn btn-primary" style="font-size: 1rem; width: 64px; float: right;">Add Room</button></span>
+    <span><button (click)="addRoom(rooms[i], roomLists[i][0].roomCateID, roomCategories[i])" class="btn btn-primary" style="font-size: 1rem; width: 64px; float: right;">Add Room</button></span>
     </h3>
   </div>
   <table class="table">

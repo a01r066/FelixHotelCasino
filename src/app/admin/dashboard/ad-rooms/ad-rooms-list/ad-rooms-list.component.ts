@@ -40,7 +40,8 @@ export class AdRoomsListComponent implements OnInit {
     this.dataService.deleteRoom(room);
   }
 
-  addRoom(room: Room, cateID: string){
+  addRoom(room: Room, cateID: string, roomCate: RoomCategory){
+    this.dataService.selectedRoomCate = roomCate;
     this.router.navigate(['room', 'add', cateID], { relativeTo: this.route });
   }
 }

@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {DataService} from '../../../../data-services/data.service';
 import {ActivatedRoute} from '@angular/router';
 import firebase from 'firebase';
+import {RoomCategory} from '../../../../pages/hotel/rooms/room-category.model';
 
 @Component({
   selector: 'app-ad-more-room',
@@ -12,6 +13,7 @@ import firebase from 'firebase';
 export class AdMoreRoomComponent implements OnInit {
   roomFormGroup: FormGroup;
   cateID = '';
+  roomCate: RoomCategory;
 
   imagePath = 'https://firebasestorage.googleapis.com/v0/b/ngfelixhotelcasino.appspot.com/o/Images%2Fdefault.jpg?alt=media&token=d556e4ec-1746-40d0-9f0f-743cdbb3893b';
   fileData: File = null;
@@ -23,7 +25,7 @@ export class AdMoreRoomComponent implements OnInit {
   ngOnInit(): void {
     const params = this.route.snapshot.params;
     this.cateID = params['id'];
-    console.log(this.cateID);
+    this.roomCate = this.dataService.selectedRoomCate;
 
     this.roomFormGroup = new FormGroup({
       title: new FormControl('',{

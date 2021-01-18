@@ -8,7 +8,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   links = ['ROOMS', 'EVENTS'];
-  selectedIndex = 0;
+  selectedIndex = -1;
 
   constructor(private router: Router,
               private route: ActivatedRoute) { }
