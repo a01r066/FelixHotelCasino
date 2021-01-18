@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Room} from '../../../../pages/hotel/rooms/room.model';
 import {DataService} from '../../../../data-services/data.service';
 import firebase from 'firebase';
@@ -22,15 +22,49 @@ export class AdEditRoomComponent implements OnInit {
   ngOnInit(): void {
     this.room = this.dataService.selectedEditRoom;
     this.imagePath = this.room.imagePaths[0];
+
+    this.roomFormGroup = new FormGroup({
+      title: new FormControl('',{
+        validators: [Validators.required]
+      }),
+      desc: new FormControl('', {
+        validators: [Validators.required]
+      }),
+      beds: new FormControl('', {
+        validators: [Validators.required]
+      }),
+      occupancy: new FormControl(),
+      size: new FormControl(),
+      view: new FormControl(),
+      ratesFrom: new FormControl('', {
+        validators: [Validators.required]
+      })
+    });
+
+    this.roomFormGroup.patchValue({
+      title: this.room.title,
+      desc: this.room.desc,
+      beds: this.room.beds,
+      occupancy: this.room.occupancy,
+      size: this.room.size,
+      view: this.room.view,
+      ratesFrom: this.room.ratesFrom,
+      imagePaths: this.room.imagePaths
+    });
   }
 
   onUpdate(){
     if(this.roomFormGroup.valid){
       // upload image
       if(this.fileData !== null){
+        console.log("Image change");
         this.uploadImageFile();
+      } else {
+        console.log("Image not change");
+        this.dataService.updateRoom(this.roomFormGroup.value, this.room);
       }
     }
+    window.alert("Data updated successful!");
   }
 
   getRandomPlayed(min, max){

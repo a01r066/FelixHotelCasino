@@ -14,7 +14,7 @@ import {AdEditRoomComponent} from './dashboard/ad-rooms/ad-edit-room/ad-edit-roo
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
-  { path: 'dashboard', component: DashboardComponent, children: [
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], children: [
       { path: 'events', component: AdEventsComponent },
       {
         path: 'rooms', component: AdRoomsComponent, children: [
