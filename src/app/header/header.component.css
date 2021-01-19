@@ -16,3 +16,13 @@
   color: #383838;
   font-weight: 700;
 }
+
+.dropdown-item {
+  font-size: 1.25rem;
+}
+
+.dropdown-menu.show {
+  border: none;
+  box-shadow: none;
+  background-color: white;
+}

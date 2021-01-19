@@ -1,7 +1,16 @@
 <div class="header">
   <div class="container">
     <h1 class="my-navbar-brand scroll-top" routerLink="" style="cursor: pointer">
-      Felix Hotel & Casino</h1>
+      {{ 'HEAD.TITLE' | translate }}
+      <span class="dropdown show" style="float:right; font-style: normal">
+        <a class="btn btn-success dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         {{ getLanguage(languages[languageIndex]) }}
+        </a>
+      <span class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" *ngFor="let lang of languages; let i = index" (click)="onSelect(i)">{{ getLanguage(lang) }}</a>
+        </span>
+      </span>
+    </h1>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -11,7 +20,7 @@
           <li class="nav-item" *ngFor="let link of links; let i = index" (click)="openLink(link, i)">
 <!--          <li class="nav-item" *ngFor="let link of links; let i = index" routerLink="{{link.toLowerCase()}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
 <!--            <a class="nav-link" [ngClass]="{highlight: i === selectedIndex}">{{link}}</a>-->
-            <span class="nav-link" [ngClass]="{highlight: i === selectedIndex}">{{link}}</span>
+            <span class="nav-link" [ngClass]="{highlight: i === selectedIndex}">{{ 'NAV.'+link | translate }}</span>
           </li>
         </ul>
       </div>

@@ -1,0 +1,14 @@
+{
+  "HEAD": {
+    "TITLE": "Felix Hotel & Casino",
+    "SELECT": "Change language"
+  },
+  "NAV": {
+    "HOME": "HOME",
+    "ABOUT": "ABOUT",
+    "HOTEL": "HOTEL",
+    "CASINO": "CASINO",
+    "EVENTS": "EVENTS",
+    "CONTACT": "CONTACT"
+  }
+}

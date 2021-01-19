@@ -23,7 +23,7 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireAnalyticsModule} from '@angular/fire/analytics';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {environment} from '../environments/environment';
 import firebase from 'firebase';
@@ -47,8 +47,15 @@ import { AlertComponent } from './shared/alert/alert.component';
 import {EncryptDecryptService} from './data-services/encrypt-decrypt.service';
 import {AdminRoutingModule} from './admin/admin-routing.module';
 import {SharedModule} from './shared/shared.module';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 firebase.initializeApp(environment.firebase);
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 
 @NgModule({
   declarations: [
@@ -85,6 +92,13 @@ firebase.initializeApp(environment.firebase);
     AlertComponent
   ],
     imports: [
+      TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
+        }),
         SharedModule,
         BrowserModule,
         AppRoutingModule,

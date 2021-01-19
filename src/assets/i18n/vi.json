@@ -1,0 +1,14 @@
+{
+  "HEAD": {
+    "TITLE": "Casino & Khách Sạn Felix",
+    "SELECT": "Chuyển đổi ngôn ngữ"
+  },
+  "NAV": {
+    "HOME": "TRANG CHỦ",
+    "ABOUT": "GIỚI THIỆU",
+    "HOTEL": "KHÁCH SẠN",
+    "CASINO": "SÒNG BẠC",
+    "EVENTS": "SỰ KIỆN",
+    "CONTACT": "LIÊN HỆ"
+  }
+}

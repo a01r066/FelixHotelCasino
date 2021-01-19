@@ -1,0 +1,14 @@
+{
+  "HEAD": {
+    "TITLE": "Felix 赌场酒店",
+    "SELECT": "改变语言"
+  },
+  "NAV": {
+    "HOME": "主页",
+    "ABOUT": "介绍",
+    "HOTEL": "饭店, 旅馆",
+    "CASINO": "赌场",
+    "EVENTS": "活动",
+    "CONTACT": "联系我们"
+  }
+}
