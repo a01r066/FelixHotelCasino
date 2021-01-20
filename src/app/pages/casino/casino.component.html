@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row" style="justify-content: center">
       <div class="col-md-12">
-        <h1>Casino</h1>
+        <h1>{{ 'NAV.CASINO' | translate }}</h1>
 <!--        <p>Whatever drinking vinegar hella fingerstache shoreditch kickstarter kitsch. La croix hella iceland flexitarian letterpress.</p>-->
       </div>
     </div>
@@ -15,7 +15,7 @@
       <div class="col-md-2" style="margin: 16px auto">
         <ul class="flex-column">
           <li class="nav-item" *ngFor="let tab of tabs; let i = index" (click)="onSelect(i)">
-            <a class="nav-link active" [ngClass]="{highlight: i == selectedIndex}">{{ tab }}</a>
+            <a class="nav-link active" [ngClass]="{highlight: i == selectedIndex}">{{ 'SUB_PAGE.' +tab | translate }}</a>
           </li>
 <!--          <li class="nav-item" (click)="viewGames()">-->
 <!--            <a class="nav-link">GAME GUIDES</a>-->

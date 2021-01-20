@@ -2,7 +2,7 @@
   <div class="row" style="justify-content: center">
     <div class="col-md-12">
       <div class="heading">
-        <h2>Make a Reservation</h2>
+        <h2>{{ 'RESERVATION_INFO.HEADER' | translate }}</h2>
       </div>
     </div>
     <div class="col-md-4 col-md-offset-2 col-sm-12">
@@ -12,23 +12,23 @@
     </div>
     <div class="col-md-4 col-sm-12">
       <div class="right-info">
-        <h4>Reservation</h4>
+        <h4>{{ 'RESERVATION_INFO.TITLE' | translate }}</h4>
         <form [formGroup]="bookingForm" (ngSubmit)="onBookNow()">
           <div class="form-row">
             <input type="datetime-local" class="form-control">
           </div>
           <div class="form-row">
             <div class="col-md-6 col-sm-12">
-              <input type="text" formControlName="fullName" class="form-control" placeholder="Full name *">
+              <input type="text" formControlName="fullName" class="form-control" placeholder="{{ 'RESERVATION_INFO.FULLNAME' | translate }} *">
             </div>
             <div class="col-md-6 col-sm-12">
-              <input type="text" formControlName="phone" class="form-control" placeholder="Phone number *">
+              <input type="text" formControlName="phone" class="form-control" placeholder="{{ 'RESERVATION_INFO.PHONE' | translate }} *">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <select class="form-control">
-                <option selected>Number of person...</option>
+                <option selected>{{ 'RESERVATION_INFO.PERSONS' | translate }}...</option>
                 <option>1 Person</option>
                 <option>2 Persons</option>
                 <option>3 Persons</option>
@@ -37,7 +37,7 @@
               </select>
             </div>
             <div class="form-group col-md-6">
-              <button type="submit" [disabled]="bookingForm.invalid" class="btn btn-success">Book Now</button>
+              <button type="submit" [disabled]="bookingForm.invalid" class="btn btn-success">{{ 'RESERVATION_INFO.BOOKNOW' | translate }}</button>
             </div>
           </div>
         </form>

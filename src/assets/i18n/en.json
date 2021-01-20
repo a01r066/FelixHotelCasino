@@ -5,10 +5,46 @@
   },
   "NAV": {
     "HOME": "HOME",
-    "ABOUT": "ABOUT",
+    "ABOUT": "ABOUT US",
     "HOTEL": "HOTEL",
     "CASINO": "CASINO",
+    "EVENTS": "OUR EVENTS",
+    "CONTACT": "CONTACT US"
+  },
+  "SUB_PAGE": {
+    "FACILITIES": "FACILITIES",
+    "ROOMS": "ROOMS",
+    "GAME GUIDES": "GAME GUIDES",
     "EVENTS": "EVENTS",
-    "CONTACT": "CONTACT"
+    "PROMOTIONAL VIDEOS": "PROMOTIONAL VIDEOS"
+  },
+  "SERVICE_INFO": {
+    "TITLE": "OUR SERVICES",
+    "SUBTITLE": "YOU CAN CALL US ON:",
+    "OR": "OR",
+    "ORDER": "LET'S ORDER"
+  },
+  "SERVICES_TITLE": {
+    "FIRST": "Restaurant",
+    "SECOND": "Table Games",
+    "THIRD": "Machine Games",
+    "FORTH": "KTV & Massage"
+  },
+  "RESERVATION_INFO": {
+    "HEADER": "MAKE A RESERVATION",
+    "TITLE": "Reservation",
+    "FULLNAME": "Full name",
+    "PHONE": "Phone number",
+    "PERSONS": "Number of person",
+    "BOOKNOW": "BOOK NOW"
+  },
+  "FEATURED_ROOMS": {
+    "OUR_ROOMS": "OUR ROOMS"
+  },
+  "OUR_BLOGS": {
+    "OUR_EVENTS": "OUR EVENTS"
+  },
+  "FOOTER": {
+    "DEVELOPED": "Developed by"
   }
 }

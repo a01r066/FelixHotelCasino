@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row" style="justify-content: center">
       <div class="col-md-12">
-        <h1>Our Events</h1>
+        <h1>{{ 'NAV.EVENTS' | translate }}</h1>
 <!--        <p>You can feel free to use our template for any purpose of your websites. Thank you. Template re-distribution is <strong>not allowed</strong> in any download site.</p>-->
       </div>
     </div>
@@ -14,7 +14,7 @@
       <div class="col-md-2" style="margin: 16px auto">
         <ul class="flex-column">
           <li class="nav-item" *ngFor="let tab of tabs; let i = index" (click)="onSelect(i)">
-            <a class="nav-link active" [ngClass]="{highlight: i == selectedIndex}">{{ tab }}</a>
+            <a class="nav-link active" [ngClass]="{highlight: i == selectedIndex}">{{ 'SUB_PAGE.' +tab | translate }}</a>
           </li>
         </ul>
       </div>

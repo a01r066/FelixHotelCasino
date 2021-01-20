@@ -10,5 +10,41 @@
     "CASINO": "赌场",
     "EVENTS": "活动",
     "CONTACT": "联系我们"
+  },
+  "SUB_PAGE": {
+    "FACILITIES": "设备",
+    "ROOMS": "客房",
+    "GAME GUIDES": "游戏指南",
+    "EVENTS": "活动",
+    "PROMOTIONAL VIDEOS": "促销性"
+  },
+  "SERVICE_INFO": {
+    "TITLE": "我们的服务",
+    "SUBTITLE": "您可以致电给我们:",
+    "OR": "OR",
+    "ORDER": "现在预订"
+  },
+  "SERVICES_TITLE": {
+    "FIRST": "餐厅",
+    "SECOND": "赌场游戏",
+    "THIRD": "机器游戏",
+    "FORTH": "KTV & 按摩"
+  },
+  "RESERVATION_INFO": {
+    "HEADER": "做一个预约",
+    "TITLE": "客户信息",
+    "FULLNAME": "顾客姓名",
+    "PHONE": "电话号码",
+    "PERSONS": "人数",
+    "BOOKNOW": "现在预订"
+  },
+  "FEATURED_ROOMS": {
+    "OUR_ROOMS": "豪华客房"
+  },
+  "OUR_BLOGS": {
+    "OUR_EVENTS": "我们的活动"
+  },
+  "FOOTER": {
+    "DEVELOPED": "由开发"
   }
 }

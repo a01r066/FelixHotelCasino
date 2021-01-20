@@ -18,8 +18,6 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item" *ngFor="let link of links; let i = index" (click)="openLink(link, i)">
-<!--          <li class="nav-item" *ngFor="let link of links; let i = index" routerLink="{{link.toLowerCase()}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
-<!--            <a class="nav-link" [ngClass]="{highlight: i === selectedIndex}">{{link}}</a>-->
             <span class="nav-link" [ngClass]="{highlight: i === selectedIndex}">{{ 'NAV.'+link | translate }}</span>
           </li>
         </ul>

@@ -10,5 +10,41 @@
     "CASINO": "SÒNG BẠC",
     "EVENTS": "SỰ KIỆN",
     "CONTACT": "LIÊN HỆ"
+  },
+  "SUB_PAGE": {
+    "FACILITIES": "TIỆN NGHI",
+    "ROOMS": "PHÒNG KHÁCH",
+    "GAME GUIDES": "HƯỚNG DẪN CHƠI",
+    "EVENTS": "SỰ KIỆN",
+    "PROMOTIONAL VIDEOS": "BỘ SƯU TẬP"
+  },
+  "SERVICE_INFO": {
+    "TITLE": "CÁC DỊCH VỤ",
+    "SUBTITLE": "HÃY GỌI CHO CHÚNG TÔI:",
+    "OR": "OR",
+    "ORDER": "HÃY ĐẶT TRƯỚC"
+  },
+  "SERVICES_TITLE": {
+    "FIRST": "Nhà Hàng",
+    "SECOND": "Bàn Chơi Bài",
+    "THIRD": "Máy Chơi Bài",
+    "FORTH": "Massage & Karaoke"
+  },
+  "RESERVATION_INFO": {
+    "HEADER": "ĐẶT BÀN",
+    "TITLE": "Đặt Phòng",
+    "FULLNAME": "Họ Tên",
+    "PHONE": "Số Điện Thoại",
+    "PERSONS": "Số Người",
+    "BOOKNOW": "GỬI"
+  },
+  "FEATURED_ROOMS": {
+    "OUR_ROOMS": "PHÒNG KHÁCH SẠN"
+  },
+  "OUR_BLOGS": {
+    "OUR_EVENTS": "CÁC SỰ KIỆN"
+  },
+  "FOOTER": {
+    "DEVELOPED": "Thiết Kế Web"
   }
 }
